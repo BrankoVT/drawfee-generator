@@ -83,3 +83,5 @@ function displayPrompt() {
     const promptText = document.getElementById('promptText');
     promptText.textContent = generatePrompt();
 }
+
+displayPrompt()
