@@ -6,10 +6,19 @@
   nav {
     text-transform: uppercase;
     background-color: inherit;
-    color: #000000;
+    color: #ffffff;
+    overflow: hidden;
+    max-height: 5rem;
+    h1 {
+      font-size: 2rem;
+      width: 35%;
+    }
   }
 
-  h1 {
-    margin-top: 10rem;
+  main {
+    margin-top: 6rem;
+    li p {
+      line-height: 0;
+    }
   }
 }

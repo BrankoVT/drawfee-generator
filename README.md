@@ -12,7 +12,7 @@ This is a website for a collection of generators based on the YouTube channel Dr
     - LinkedIn: [Branko Van Tendeloo](https://www.linkedin.com/in/branko-van-tendeloo/)
     - Twitter: [@Branko44075805](https://twitter.com/Branko44075805)
     - YouTube: [Branko](https://www.youtube.com/channel/UCZ4P5SXFYR6MQgQaNmGtxaw)
-    - Reddit: [Brankovt1](https://www.reddit.com/user/Brankovt1)
+    - Reddit: [u/brankovt1](https://www.reddit.com/user/Brankovt1)
 
 ## Credit
 Credit goes to all Drawfee members:
