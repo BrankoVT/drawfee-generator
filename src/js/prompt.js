@@ -33,15 +33,16 @@ const pokemon = ["Spheal (Pokémon)", "Pikachu", "Blastoise", "Swampert", "Mr Mi
 const sweets = ["candy", "Mars bar", "ice cream", "chocolate"];
 const celeb = ["Keanu Reeves", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page"];
 const drawfeeAnimals = ["Joy Cat", "Miss Olive"];
+const simpsons = ["Bart Simpson", "Lisa Simpson", "Homer Simpson", "Marge Simpson", "Maggie Simpson", "Krusty the Clown", "Milhouse"]
 const drawfee = [...drawfeeHost, ...drawfeeAnimals];
-const humanCharacter = [...aceAttorney, ...superHero, ...superVillain];
+const humanCharacter = [...aceAttorney, ...superHero, ...superVillain, ...simpsons];
 const nonHumanCharacter = [...sonic, ...spongebob, ...pokemon];
 const food = [...fruit, ...sweets];
 const animalAndCharacter = [...animal, ...nonHumanCharacter, ...drawfeeAnimals];
 const object = [...transport, ...food];
 const human = [...drawfeeHost, ...humanCharacter, ...celeb];
 const character = [...humanCharacter, ...nonHumanCharacter];
-const sapient = [...human, character];
+const sapient = [...human, ...character];
 
 // Define the entries
 const entries = {
