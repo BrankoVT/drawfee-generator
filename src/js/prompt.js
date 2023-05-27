@@ -30,13 +30,14 @@ const aceAttorney = ["Phoenix Wright", "Apollo Justice", "Miles Edgeworth", "Man
 const sonic = ["Sonic", "Dr Eggman", "Tails", "Shadow the Hedgehog", "Silver the Hedgehog", "Jet the Hawk", "Charmy Bee", "Big the Cat", "Blaze the Cat", "Espio the Chameleon", "Amy Rose", "Knuckles the Echidna", "Cream the Rabbit", "Vector the Alligator"];
 const spongebob = ["Spongebob Squarepants", "Squidward Tentacles", "Patrick Star", "Pearl Krabs", "K.A.R.E.N. (Spongebob)", "Mrs Puff (Spongebob)", "Larry the Lobster", "Sandy Cheeks", "Plankton (Spongebob)", "Gary (Spongebob)", "Squilliam Fancyson", "Eugene Krabs"];
 const pokemon = ["Spheal (Pokémon)", "Pikachu", "Blastoise", "Swampert", "Mr Mime", "Sprigatito", "Eevee", "Charizard", "Venusaur", "Snorlax"];
-const sweats = ["candy", "Mars bar", "ice cream", "chocolate"];
-const celeb = ["Keanu Reeves", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page"]
-const drawfee = [...drawfeeHost];
+const sweets = ["candy", "Mars bar", "ice cream", "chocolate"];
+const celeb = ["Keanu Reeves", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page"];
+const drawfeeAnimals = ["Joy Cat", "Miss Olive"];
+const drawfee = [...drawfeeHost, ...drawfeeAnimals];
 const humanCharacter = [...aceAttorney, ...superHero, ...superVillain];
 const nonHumanCharacter = [...sonic, ...spongebob, ...pokemon];
-const food = [...fruit, ...sweats];
-const animalAndCharacter = [...animal, ...nonHumanCharacter]
+const food = [...fruit, ...sweets];
+const animalAndCharacter = [...animal, ...nonHumanCharacter, ...drawfeeAnimals];
 const object = [...transport, ...food];
 const human = [...drawfeeHost, ...humanCharacter, ...celeb];
 const character = [...humanCharacter, ...nonHumanCharacter];
@@ -81,6 +82,10 @@ function generatePrompt() {
 function displayPrompt() {
     const promptText = document.getElementById('promptText');
     promptText.textContent = generatePrompt();
+
+
+    const audioPlayer = document.getElementById('audioPlayer');
+    audioPlayer.play();
 
     console.log("displaying prompt")
 }
