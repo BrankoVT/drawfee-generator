@@ -70,7 +70,6 @@ const entries = {
 function generatePrompt() {
     // Select a random prompt
     const randomPrompt = prompts[Math.floor(Math.random() * prompts.length)];
-    console.log(randomPrompt)
 
     // Replace blanks with random entries
     return randomPrompt.replace(/%(\w+)%/g, (match, key) => {
@@ -82,6 +81,14 @@ function generatePrompt() {
 function displayPrompt() {
     const promptText = document.getElementById('promptText');
     promptText.textContent = generatePrompt();
+
+    console.log("displaying prompt")
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener to the button
+    let newPromptButton = document.getElementById('newPromptButton');
+    newPromptButton.addEventListener('click', displayPrompt);
+});
 
 displayPrompt()
