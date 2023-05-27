@@ -13,13 +13,15 @@ const prompts = [
     "%sapient% in a %food% eating contest",
     "%character% wants %character% dead",
     "the evilest version of %character%",
-    "%character% will never forgive %character% for what they did"
+    "%character% will never forgive %character% for what they did",
+    "%sapient% was eating a %food% before rudely being interrupted by %sapient%",
+    "%sapient% absolutely hates %object%s"
 ];
 
 // Entries
 const drawfeeHost = ["Nathan", "Jacob", "Karina", "Julia", "David"];
-const superHero = ["Deadpool", "Spider-Man", "Iron Man", "Mr Incredible", "Elastigirl", "Captain America", "Batman", "Wonder Woman", "Superman", "Black Widow"];
-const superVillain = ["The Joker", "The Riddler", "Two-Face"]
+const superHero = ["Deadpool", "Spider-Man", "Iron Man", "Mr Incredible", "Elastigirl", "Frozone", "Captain America", "Batman", "Wonder Woman", "Superman", "Black Widow"];
+const superVillain = ["The Joker", "The Riddler", "Two-Face", "Harley Quinn", "Poison Ivy", "The Penguin (Batman)", "Mr Freeze"]
 const transport = ["airplane", "car", "bike", "motorbike", "boat", "container ship", "train", "subway", "helicopter", "truck", "scooter", "bus", "yacht", "hovercraft", "ferry", "rocket", "zeppelin", "hot air balloon", "gondola", "tram"];
 const dinosaur = ["tyrannosaurus rex", "stegosaurus", "velociraptor", "triceratops", "brontosaurus"];
 const extinctAnimal = ["mammoth", "dodo", "saber-tooth tiger", ...dinosaur];
@@ -31,14 +33,17 @@ const sonic = ["Sonic", "Dr Eggman", "Tails", "Shadow the Hedgehog", "Silver the
 const spongebob = ["Spongebob Squarepants", "Squidward Tentacles", "Patrick Star", "Pearl Krabs", "K.A.R.E.N. (Spongebob)", "Mrs Puff (Spongebob)", "Larry the Lobster", "Sandy Cheeks", "Plankton (Spongebob)", "Gary (Spongebob)", "Squilliam Fancyson", "Eugene Krabs"];
 const pokemon = ["Spheal (Pokémon)", "Pikachu", "Blastoise", "Swampert", "Mr Mime", "Sprigatito", "Eevee", "Charizard", "Venusaur", "Snorlax"];
 const sweets = ["candy", "Mars bar", "ice cream", "chocolate"];
-const celeb = ["Keanu Reeves", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page"];
-const drawfeeAnimals = ["Joy Cat", "Miss Olive"];
+const celeb = ["Keanu Reeves", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
+const drawfeeAnimal = ["Joy Cat", "Miss Olive"];
 const simpsons = ["Bart Simpson", "Lisa Simpson", "Homer Simpson", "Marge Simpson", "Maggie Simpson", "Krusty the Clown", "Milhouse"]
-const drawfee = [...drawfeeHost, ...drawfeeAnimals];
-const humanCharacter = [...aceAttorney, ...superHero, ...superVillain, ...simpsons];
+const drawtectives = ["Grandan Highforge", "York Rogdul", "Rosé (Drawtectives)", "Jancy True", "Eugene Finch", "Don Jovi", "Kingston Munch", "Villainius", "Harper Justice", "Ogalvy Smythe", "Lotta Justice", "Sorin Justice", "Emery Justice", "Harvey Hornswoggle"]
+const drawfeeFictionalAnimal = ["Pissboy"];
+const drawfeeCharacter = [...drawtectives, ...drawfeeFictionalAnimal];
+const drawfee = [...drawfeeHost, ...drawfeeAnimal, ...drawfeeCharacter];
+const humanCharacter = [...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives];
 const nonHumanCharacter = [...sonic, ...spongebob, ...pokemon];
 const food = [...fruit, ...sweets];
-const animalAndCharacter = [...animal, ...nonHumanCharacter, ...drawfeeAnimals];
+const animalAndCharacter = [...animal, ...nonHumanCharacter, ...drawfeeAnimal, ...drawfeeFictionalAnimal];
 const object = [...transport, ...food];
 const human = [...drawfeeHost, ...humanCharacter, ...celeb];
 const character = [...humanCharacter, ...nonHumanCharacter];
