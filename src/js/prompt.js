@@ -15,7 +15,8 @@ const prompts = [
     "the evilest version of %character%",
     "%character% will never forgive %character% for what they did",
     "%sapient% was eating a %food% before rudely being interrupted by %sapient%",
-    "%sapient% absolutely hates %object%s"
+    "%sapient% absolutely hates %object%s",
+    "you do not want to know %sapient%'s opinion on %object%s"
 ];
 
 // Entries
@@ -33,8 +34,9 @@ const sonic = ["Sonic", "Dr Eggman", "Tails", "Shadow the Hedgehog", "Silver the
 const spongebob = ["Spongebob Squarepants", "Squidward Tentacles", "Patrick Star", "Pearl Krabs", "K.A.R.E.N. (Spongebob)", "Mrs Puff (Spongebob)", "Larry the Lobster", "Sandy Cheeks", "Plankton (Spongebob)", "Gary (Spongebob)", "Squilliam Fancyson", "Eugene Krabs"];
 const pokemon = ["Spheal (Pokémon)", "Pikachu", "Blastoise", "Swampert", "Mr Mime", "Sprigatito", "Eevee", "Charizard", "Venusaur", "Snorlax"];
 const sweets = ["candy", "Mars bar", "ice cream", "chocolate"];
-const celeb = ["Keanu Reeves", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
+const celeb = ["Keanu Reeves", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
 const drawfeeAnimal = ["Joy Cat", "Miss Olive"];
+const breakingBad = ["Walter White", "Jesse Pinkman", "Gustavo Fring", "Hank Schrader"];
 const simpsons = ["Bart Simpson", "Lisa Simpson", "Homer Simpson", "Marge Simpson", "Maggie Simpson", "Krusty the Clown", "Milhouse"]
 const drawtectives = ["Grandan Highforge", "York Rogdul", "Rosé (Drawtectives)", "Jancy True", "Eugene Finch", "Don Jovi", "Kingston Munch", "Villainius", "Harper Justice", "Ogalvy Smythe", "Lotta Justice", "Sorin Justice", "Emery Justice", "Harvey Hornswoggle"]
 const drawfeeFictionalAnimal = ["Pissboy"];
