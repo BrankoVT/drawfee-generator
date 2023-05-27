@@ -1,6 +1,6 @@
 {
-  "name": "1ITF_Sass_BS5_project",
-  "version": "1.0.0",
+  "name": "Drawfee_Generator",
+  "version": "0.0.2",
   "description": "1ITF Sass - Bootstrap 5 project",
   "main": "index.js",
   "repository": {
@@ -25,6 +25,9 @@
   },
   "type": "module",
   "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.2",
+    "babel-loader": "^9.1.2",
     "bootstrap": "^5.2.3",
     "browser-sync": "^2.27.11",
     "del": "^7.0.0",
@@ -46,6 +49,8 @@
     "gulp-postcss": "^9.0.1",
     "gulp-real-favicon": "^0.3.2",
     "gulp-sourcemaps": "^3.0.0",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "webpack": "^5.84.1",
+    "webpack-cli": "^5.1.1"
   }
 }
