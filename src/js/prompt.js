@@ -20,7 +20,7 @@ const prompts = [
     "Presidential alert, the girls are %activity%",
     "why is %sapient% %action%?",
     "%sapient%'s %significantOther% really likes their %object%",
-    "%sapient% is eating %aFood% out of a %object%",
+    "%sapient% is eating %aFood% out of a %objectNoFood%",
     "%sapient% will never eat %aFood% ever again after this moment"
 ];
 
@@ -39,10 +39,10 @@ const sonic = ["Sonic", "Dr Eggman", "Tails", "Shadow the Hedgehog", "Silver the
 const spongebob = ["Spongebob Squarepants", "Squidward Tentacles", "Patrick Star", "Pearl Krabs", "K.A.R.E.N. (Spongebob)", "Mrs Puff (Spongebob)", "Larry the Lobster", "Sandy Cheeks", "Plankton (Spongebob)", "Gary (Spongebob)", "Squilliam Fancyson", "Eugene Krabs"];
 const pokemon = ["Spheal (Pokémon)", "Pikachu", "Blastoise", "Swampert", "Mr Mime", "Sprigatito", "Eevee", "Charizard", "Venusaur", "Snorlax"];
 const sweet = ["candy", "Mars bar", "ice cream"];
-const nonPluralSweet = ["chocolate"]
+const nonPluralSweet = ["chocolate"];
 const celeb = ["Keanu Reeves", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "The Rock", "John Cena", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
 const drawfeeAnimal = ["Joy Cat", "Miss Olive"];
-const breakingBad = ["Walter White", "Jesse Pinkman", "Gustavo Fring", "Hank Schrader"];
+const breakingBad = ["Walter White", "Skyler White", "Jesse Pinkman", "Gustavo Fring", "Hank Schrader"];
 const simpsons = ["Bart Simpson", "Lisa Simpson", "Homer Simpson", "Marge Simpson", "Maggie Simpson", "Krusty the Clown", "Milhouse"]
 const drawtectives = ["Grandan Highforge", "York Rogdul", "Rosé (Drawtectives)", "Jancy True", "Eugene Finch", "Don Jovi", "Kingston Munch", "Villainius", "Harper Justice", "Ogalvy Smythe", "Lotta Justice", "Sorin Justice", "Emery Justice", "Harvey Hornswoggle"]
 const drawfeeFictionalAnimal = ["Pissboy", "Todd from Mario"];
@@ -58,10 +58,11 @@ const nonPluralMeal = ["spaghetti", "lasagne", "pizza", "beef", "pork"];
 const meal = ["egg", "Slim Jim"];
 const winnieThePoo= ["Winnie The Poo", "Ior (Winnie the Poo)", "Tigger", "Piglet (Winnie the Poo)"];
 const mickeyMouse = ["Mickey Mouse", "Minnie Mouse", "Daisy Duck", "Pete (Mickey Mouse)", "Max Goof", "Donald Duck", "Goofy"];
+const familyGuy = ["Peter Griffin", "Lois Griffin", "Meg Griffin", "Chris Griffin"];
 const miscNintendo = ["Olimar", "Samus Aren"];
 const miscNintendoAnimal = ["Ridley (Metroid)"];
 const miscHuman = ["Jon Arbuckle", "Charlie Brown", "Christopher Robin"];
-const miscAnimal = ["Garfield", "Odie (Garfield)", "Nermal (Garfield)", "Snoopy"];
+const miscAnimal = ["Garfield", "Odie (Garfield)", "Nermal (Garfield)", "Snoopy", "Brian Griffin"];
 const drawfeeCharacter = [...drawtectives, ...drawfeeFictionalAnimal];
 const drawfee = [...drawfeeHost, ...drawfeeAnimal, ...drawfeeCharacter];
 const disneyAnimal = [...winnieThePoo, ...mickeyMouse];
@@ -69,14 +70,15 @@ const disneyHuman = [];
 const disney = [...disneyHuman, ...disneyAnimal];
 const nintendo = [...mario, ...zelda, ...miscNintendo];
 const nintendoAnimal = [...miscNintendoAnimal, ...marioAnimal, ...pokemon];
-const humanCharacter = [...nintendo, ...miscHuman, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
+const humanCharacter = [...nintendo, ...miscHuman, ...familyGuy, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
 const nonHumanCharacter = [...sonic, ...miscAnimal, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal, ...disneyAnimal];
 const nonPluralFood = [...nonPluralSweet, ...nonPluralMeal];
 const pluralFood = [...fruit, ...sweet, ...meal];
 const food = [...pluralFood, ...nonPluralFood];
 const housePart = [...furniture, ...appliances];
 const animalAndCharacter = [...animal, ...nonHumanCharacter];
-const object = [...transport, ...food, ...housePart, ...clothing];
+const objectNoFood = [...transport, ...food, ...housePart, ...clothing];
+const object = [...objectNoFood, ...food];
 const nonPluralObject = [...nonPluralFood];
 const human = [...drawfeeHost, ...humanCharacter, ...celeb];
 const character = [...humanCharacter, ...nonHumanCharacter];
