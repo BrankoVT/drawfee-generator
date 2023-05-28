@@ -14,13 +14,14 @@ const prompts = [
     "%sapient% wants %character% dead",
     "the evilest version of %sapient%",
     "%sapient% will never forgive %character% for what they did",
-    "%sapient% was eating %food% before rudely being interrupted by %sapient%",
+    "%sapient% was eating %aFood% before rudely being interrupted by %sapient%",
     "%sapient% absolutely hates %objects%",
     "you do not want to know %sapient%'s opinion on %objects%",
     "Presidential alert, the girls are %activity%",
     "why is %sapient% %action%?",
     "%sapient%'s %significantOther% really likes their %object%",
-    "%sapient% is eating %food% out of a %object%"
+    "%sapient% is eating %aFood% out of a %object%",
+    "%sapient% will never eat %aFood% ever again after this moment"
 ];
 
 // Entries
@@ -37,7 +38,8 @@ const aceAttorney = ["Phoenix Wright", "Apollo Justice", "Miles Edgeworth", "Man
 const sonic = ["Sonic", "Dr Eggman", "Tails", "Shadow the Hedgehog", "Silver the Hedgehog", "Jet the Hawk", "Charmy Bee", "Big the Cat", "Blaze the Cat", "Espio the Chameleon", "Amy Rose", "Knuckles the Echidna", "Cream the Rabbit", "Vector the Alligator"];
 const spongebob = ["Spongebob Squarepants", "Squidward Tentacles", "Patrick Star", "Pearl Krabs", "K.A.R.E.N. (Spongebob)", "Mrs Puff (Spongebob)", "Larry the Lobster", "Sandy Cheeks", "Plankton (Spongebob)", "Gary (Spongebob)", "Squilliam Fancyson", "Eugene Krabs"];
 const pokemon = ["Spheal (Pokémon)", "Pikachu", "Blastoise", "Swampert", "Mr Mime", "Sprigatito", "Eevee", "Charizard", "Venusaur", "Snorlax"];
-const sweets = ["candy", "Mars bar", "ice cream", "chocolate"];
+const sweet = ["candy", "Mars bar", "ice cream"];
+const nonPluralSweet = ["chocolate"]
 const celeb = ["Keanu Reeves", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "The Rock", "John Cena", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
 const drawfeeAnimal = ["Joy Cat", "Miss Olive"];
 const breakingBad = ["Walter White", "Jesse Pinkman", "Gustavo Fring", "Hank Schrader"];
@@ -47,31 +49,37 @@ const drawfeeFictionalAnimal = ["Pissboy", "Todd from Mario"];
 const mario = ["Mario", "Luigi", "Toad", "Waluigi", "Wario", "Bowser", "Princess Peach", "Princess Daisy", "Princess Rosalina"];
 const marioAnimal = ["Boo (Mario)", "Koopa", "Donkey Kong", "Diddy Kong", "Yoshi (Mario)"]
 const zelda = ["Ganondorf", "Link", "Zelda", "Tingle"];
-const miscNintendo = ["Olimar", "Samus Aren"];
-const miscNintendoAnimal = ["Ridley (Metroid)"];
 const activity = ["fighting", "dancing", "singing", "running", "crying", "jamming", "stealing stuff", "sleeping", "dying", "being obnoxious", "kissing", "hugging", "cuddling", "being cute", "being annoying"];
 const furniture = ["closet", "fridge", "freezer", "oven", "microwave", "furnace", "sink", "fireplace", "dishwasher", "cupboard", "sofa", "night stand", "bed", "love seat", "desk", "chair", "bookcase", "barbeque"];
-const appliances =  ["air fryer", "kitchen robot", "mixer", "blender", "book", "laptop", "computer", "fryer", "spork", "spoon", "knife", "fork", "frying pan"];
+const appliances = ["air fryer", "kitchen robot", "mixer", "blender", "book", "laptop", "computer", "fryer", "spork", "spoon", "knife", "fork", "frying pan"];
 const significantOther = ["wife", "husband", "spouse", "boyfriend", "girlfriend", "partner"];
 const clothing = ["skirt", "belt", "cap", "hat", "tophat", "pantaloon", "ring", "bracelet", "hoodie", "sweater", "bowtie", "tie", "T-shirt", "shirt", "dress", "poncho"]
+const nonPluralMeal = ["spaghetti", "lasagne", "pizza", "beef", "pork"];
+const meal = ["egg", "Slim Jim"]
+const miscNintendo = ["Olimar", "Samus Aren"];
+const miscNintendoAnimal = ["Ridley (Metroid)"];
+const miscHuman = ["Jon Arbuckle"]
+const miscAnimal = ["Garfield", "Odie (Garfield)", "Nermal (Garfield)"]
 const drawfeeCharacter = [...drawtectives, ...drawfeeFictionalAnimal];
 const drawfee = [...drawfeeHost, ...drawfeeAnimal, ...drawfeeCharacter];
 const nintendo = [...mario, ...zelda, ...miscNintendo];
 const nintendoAnimal = [...miscNintendoAnimal, ...marioAnimal, ...pokemon];
-const humanCharacter = [...nintendo, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
-const nonHumanCharacter = [...sonic, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal];
-const food = [...fruit, ...sweets];
-const nonPluralFood= []
+const humanCharacter = [...nintendo, ...miscHuman, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
+const nonHumanCharacter = [...sonic, ...miscAnimal, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal];
+const nonPluralFood = [...nonPluralSweet, ...nonPluralMeal];
+const pluralFood = [...fruit, ...sweet, ...meal];
+const food = [...pluralFood, ...nonPluralFood];
 const housePart = [...furniture, ...appliances]
 const animalAndCharacter = [...animal, ...nonHumanCharacter];
 const object = [...transport, ...food, ...housePart, ...clothing];
+const nonPluralObject = [...nonPluralFood]
 const human = [...drawfeeHost, ...humanCharacter, ...celeb];
 const character = [...humanCharacter, ...nonHumanCharacter];
 const sapient = [...human, ...character];
 const action = [...activity]
 
-const objects = object.map(pluralize);
-const aFood = [...nonPluralFood, ...food.map(addA)]
+const objects = [...object.map(pluralize), ...nonPluralObject];
+const aFood = [...nonPluralFood, ...pluralFood.map(addA)]
 
 // Define the entries
 const entries = {
@@ -89,7 +97,8 @@ const entries = {
     extinctAnimal: extinctAnimal,
     mythicalAnimal: mythicalAnimal,
     significantOther: significantOther,
-    food: aFood,
+    food: food,
+    aFood: aFood,
     humanCharacter: humanCharacter,
     nonHumanCharacter: nonHumanCharacter,
     character: character,
@@ -123,7 +132,7 @@ function displayPrompt() {
     console.log("displaying prompt")
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Add event listener to the button
     let newPromptButton = document.getElementById('newPromptButton');
     newPromptButton.addEventListener('click', displayPrompt);
@@ -140,8 +149,17 @@ function pluralize(word) {
     }
 }
 
+function startsWithVowel(word) {
+    const vowelRegex = /^[aeiou]/i; // Case-insensitive regex for vowels
+    return vowelRegex.test(word);
+}
+
 function addA(word) {
-    return "a " + word;
+    if (startsWithVowel(word)) {
+        return "an " + word;
+    } else {
+        return "a " + word;
+    }
 }
 
 displayPrompt()
