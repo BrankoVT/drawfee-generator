@@ -14,12 +14,13 @@ const prompts = [
     "%sapient% wants %character% dead",
     "the evilest version of %sapient%",
     "%sapient% will never forgive %character% for what they did",
-    "%sapient% was eating a %food% before rudely being interrupted by %sapient%",
+    "%sapient% was eating %food% before rudely being interrupted by %sapient%",
     "%sapient% absolutely hates %objects%",
     "you do not want to know %sapient%'s opinion on %objects%",
     "Presidential alert, the girls are %activity%",
     "why is %sapient% %action%?",
-    "%sapient%'s %significantOther% really likes their %object%"
+    "%sapient%'s %significantOther% really likes their %object%",
+    "%sapient% is eating %food% out of a %object%"
 ];
 
 // Entries
@@ -52,7 +53,7 @@ const activity = ["fighting", "dancing", "singing", "running", "crying", "jammin
 const furniture = ["closet", "fridge", "freezer", "oven", "microwave", "furnace", "sink", "fireplace", "dishwasher", "cupboard", "sofa", "night stand", "bed", "love seat", "desk", "chair", "bookcase", "barbeque"];
 const appliances =  ["air fryer", "kitchen robot", "mixer", "blender", "book", "laptop", "computer", "fryer", "spork", "spoon", "knife", "fork", "frying pan"];
 const significantOther = ["wife", "husband", "spouse", "boyfriend", "girlfriend", "partner"];
-const clothing = ["skirt", "belt", "pantaloon", "ring", "bracelet", "hoodie", "sweater", "bowtie", "tie", "T-shirt", "shirt", "dress", "poncho"]
+const clothing = ["skirt", "belt", "cap", "hat", "tophat", "pantaloon", "ring", "bracelet", "hoodie", "sweater", "bowtie", "tie", "T-shirt", "shirt", "dress", "poncho"]
 const drawfeeCharacter = [...drawtectives, ...drawfeeFictionalAnimal];
 const drawfee = [...drawfeeHost, ...drawfeeAnimal, ...drawfeeCharacter];
 const nintendo = [...mario, ...zelda, ...miscNintendo];
@@ -60,6 +61,7 @@ const nintendoAnimal = [...miscNintendoAnimal, ...marioAnimal, ...pokemon];
 const humanCharacter = [...nintendo, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
 const nonHumanCharacter = [...sonic, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal];
 const food = [...fruit, ...sweets];
+const nonPluralFood= []
 const housePart = [...furniture, ...appliances]
 const animalAndCharacter = [...animal, ...nonHumanCharacter];
 const object = [...transport, ...food, ...housePart, ...clothing];
@@ -69,6 +71,7 @@ const sapient = [...human, ...character];
 const action = [...activity]
 
 const objects = object.map(pluralize);
+const aFood = [...nonPluralFood, ...food.map(addA)]
 
 // Define the entries
 const entries = {
@@ -86,7 +89,7 @@ const entries = {
     extinctAnimal: extinctAnimal,
     mythicalAnimal: mythicalAnimal,
     significantOther: significantOther,
-    food: food,
+    food: aFood,
     humanCharacter: humanCharacter,
     nonHumanCharacter: nonHumanCharacter,
     character: character,
@@ -135,6 +138,10 @@ function pluralize(word) {
     } else {
         return word + "s";
     }
+}
+
+function addA(word) {
+    return "a " + word;
 }
 
 displayPrompt()
