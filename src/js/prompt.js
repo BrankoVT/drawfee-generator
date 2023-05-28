@@ -186,12 +186,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Function to pluralise a word
 function pluralise(word) {
-    if (word.endsWith("s")) {
-        return word + "es";
-    } else if (word.endsWith("y")) {
-        return word.slice(0, -1) + "ies";
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    const lastLetter = word[word.length - 1];
+    const secondToLastLetter = word[word.length - 2];
+
+    if (vowels.includes(secondToLastLetter.toLowerCase())) {
+        if (lastLetter.toLowerCase() === 'y' && !vowels.includes(secondToLastLetter.toLowerCase())) {
+            return word.substring(0, word.length - 1) + 'ies'; // Swap "y" to "ies"
+        } else if (lastLetter.toLowerCase() === 's') {
+            return word + 'es'; // Word already ends in "s", no change needed
+        } else {
+            return word + 's'; // Add an "s" to the word
+        }
     } else {
-        return word + "s";
+        return word + 's'; // Add an "s" to the word
     }
 }
 
@@ -208,4 +216,4 @@ function addA(word) {
     }
 }
 
-displayPrompt()
+displayPrompt();
