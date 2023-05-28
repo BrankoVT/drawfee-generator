@@ -20,7 +20,7 @@ const prompts = [
     "Presidential alert, the girls are %activity%",
     "why is %sapient% %action%?",
     "%sapient%'s %significantOther% really likes their %object%",
-    "%sapient% is eating %foodA% out of a %objectNoFoodSingular%",
+    "%sapient% is eating %foodA% out of %objectNoFoodSingularA%",
     "%sapient% will never eat %foodA% ever again after this moment",
     "%sapient% thinking about their childhood %objectNoFood% in their dying moments",
     "%sapient% is %action%, but only %sapient% seems to care",
@@ -113,8 +113,10 @@ const sapient = [...human, ...character];
 const action = [...activity];
 
 const objects = [...objectPlural.map(pluralise), ...objectNoPlural];
+const objectsA = [...object.map(addA)];
 const objectNoFood = [...objectNoFoodPlural.map(pluralise), ...objectNoFoodNoPlural];
 const foodA = [...foodNoPlural, ...foodPlural.map(addA)];
+const objectNoFoodSingularA = [...objectNoFoodSingular.map(addA)];
 
 // Define the entries
 const entries = {
@@ -126,6 +128,7 @@ const entries = {
     dinosaur: dinosaur,
     pokemon: pokemon,
     objectNoFoodSingular: objectNoFoodSingular,
+    objectNoFoodSingularA: objectNoFoodSingularA,
     object: object,
     objects: objects,
     disney: disney,
