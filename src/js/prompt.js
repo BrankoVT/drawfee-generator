@@ -37,6 +37,7 @@ const celeb = ["Keanu Reeves", "Rowan Atkinson", "Gandhi", "Daniel Radcliffe", "
 const chainsawMan = ["Makima", "Power (Chainsaw Man)", "Denji (Chainsaw Man)"];
 const clothing = ["skirt", "jacket", "belt", "cap", "hat", "coat", "glove", "waistcoat", "boot", "bikini", "shoe", "tophat", "pantaloon", "ring", "speedo", "bracelet", "hoodie", "sweater", "bowtie", "tie", "T-shirt", "shirt", "dress", "poncho"];
 const clothingNoPlural = ["pants", "trousers", "swimming trunks", "high heels", "pajamas", "shorts", "glasses", "boxer shorts", "knickers", "thigh highs"];
+const digimon = ["Agumon", "Soulmon", "Beelzemon"];
 const dinosaur = ["tyrannosaurus rex", "stegosaurus", "velociraptor", "triceratops", "brontosaurus"];
 const dragonBallZ = ["Goku", "Bulma", "Vegeta", "Trunks"];
 const dragonBallZNonHuman = ["Piccolo", "Frieza"];
@@ -75,8 +76,8 @@ const zelda = ["Ganondorf", "Link", "Zelda", "Tingle"];
 
 const animal = ["lion", "barracuda", "ox", "badger", "moose", "slug", "parrot", "kiwi (animal)", "snail", "horseshoe crab", "puffin", "cobra", "rattle snake", "owl", "bumblebee", "wasp", "bee", "mosquito", "daddy long-legs", "dog", "shrimp", "panther", "salamander", "chihuahua", "bat", "goldfish", "pufferfish", "frog", "alpaca", "beagle", "German shepherd", "pitbull", "duck", "swan", "goose", "bison", "llama", "mule", "donkey", "horse", "naked mole rat", "jaguar", "ladybug", "whale", "walrus", "seal", "blob fish", "coral", "chimp", "polar bear", "kangaroo", "spider", "butterfly", "ostrich", "emu", "cat", "fish", "jellyfish", "crab", "pigeon", "ape", "iguana", "lizard", "tortoise", "bird", "eagle", "hawk", "squid", "octopus", "sea star", "ferret", "mouse", "rat", "opossum", "cow", "sheep", "pig", "turtle", "shark", "tiger", "elephant", "giraffe", "zebra", "bear", "monkey", "penguin", "dolphin", "koala", "panda", "hippopotamus", "wolf", "deer", "rabbit", "fox", "cheetah", "rhinoceros", "gorilla", "squirrel", ...extinctAnimal, ...mythicalAnimal];
 
-const miscHuman = ["Jon Arbuckle", "Dr Eggman", "James Bond", "Mr Bean", "Santa Claus", "Captain Jack Sparrow", "The Doctor (Doctor Who)", "Charlie Brown", "Christopher Robin", "Popeye the Sailor Man"];
-const miscNonHuman = ["Garfield", "Odie (Garfield)", "Nermal (Garfield)", "Snoopy", "Brian Griffin"];
+const miscHuman = ["Jon Arbuckle", "Beelzebub", "Satan", "God", "Dr Eggman", "James Bond", "Mr Bean", "Santa Claus", "Captain Jack Sparrow", "The Doctor (Doctor Who)", "Charlie Brown", "Christopher Robin", "Popeye the Sailor Man"];
+const miscNonHuman = ["Garfield", "Ponygon", "Odie (Garfield)", "Nermal (Garfield)", "Snoopy", "Brian Griffin"];
 const miscAnime = ["One-Punch Man", "Light Yagami", "Naruto Uzumaki", "Sasuke Uchiha"];
 const miscAnimeNonHuman = ["Ryuk", "Pochita"];
 const miscNintendo = ["Olimar", "Samus Aren"];
