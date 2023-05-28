@@ -38,8 +38,8 @@ const aceAttorney = ["Phoenix Wright", "Apollo Justice", "Miles Edgeworth", "Man
 const sonic = ["Sonic", "Dr Eggman", "Tails", "Shadow the Hedgehog", "Silver the Hedgehog", "Jet the Hawk", "Charmy Bee", "Big the Cat", "Blaze the Cat", "Espio the Chameleon", "Amy Rose", "Knuckles the Echidna", "Cream the Rabbit", "Vector the Alligator"];
 const spongebob = ["Spongebob Squarepants", "Squidward Tentacles", "Patrick Star", "Pearl Krabs", "K.A.R.E.N. (Spongebob)", "Mrs Puff (Spongebob)", "Larry the Lobster", "Sandy Cheeks", "Plankton (Spongebob)", "Gary (Spongebob)", "Squilliam Fancyson", "Eugene Krabs"];
 const pokemon = ["Spheal (Pokémon)", "Pikachu", "Blastoise", "Swampert", "Mr Mime", "Sprigatito", "Eevee", "Charizard", "Venusaur", "Snorlax"];
-const sweet = ["candy", "Mars bar", "ice cream"];
-const nonPluralSweet = ["chocolate"];
+const sweet = ["Mars bar", "ice cream"];
+const nonPluralSweet = ["chocolate", "candy"];
 const celeb = ["Keanu Reeves", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "The Rock", "John Cena", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
 const drawfeeAnimal = ["Joy Cat", "Miss Olive"];
 const breakingBad = ["Walter White", "Skyler White", "Jesse Pinkman", "Gustavo Fring", "Hank Schrader"];
@@ -56,23 +56,25 @@ const significantOther = ["wife", "husband", "spouse", "boyfriend", "girlfriend"
 const clothing = ["skirt", "belt", "cap", "hat", "tophat", "pantaloon", "ring", "bracelet", "hoodie", "sweater", "bowtie", "tie", "T-shirt", "shirt", "dress", "poncho"];
 const nonPluralMeal = ["spaghetti", "lasagne", "pizza", "beef", "pork"];
 const meal = ["egg", "Slim Jim"];
-const winnieThePoo= ["Winnie The Poo", "Ior (Winnie the Poo)", "Tigger", "Piglet (Winnie the Poo)"];
+const winnieThePoo = ["Winnie The Poo", "Ior (Winnie the Poo)", "Tigger", "Piglet (Winnie the Poo)"];
 const mickeyMouse = ["Mickey Mouse", "Minnie Mouse", "Daisy Duck", "Pete (Mickey Mouse)", "Max Goof", "Donald Duck", "Goofy"];
 const familyGuy = ["Peter Griffin", "Lois Griffin", "Meg Griffin", "Chris Griffin"];
 const chainsawMan = ["Makima", "Power (Chainsaw Man)", "Denji (Chainsaw Man)"];
+const dragonBallZ = ["Goku", "Bulma", "Vegeta", "Trunks"];
+const dragonBallZNonHuman = ["Piccolo", "Frieza"];
 const miscNintendo = ["Olimar", "Samus Aren"];
 const miscNintendoAnimal = ["Ridley (Metroid)"];
-const miscAnime = ["One-Punch Man", "Light Yagami"];
-const miscAnimeNonHuman = ["Ryuk"]
+const miscAnime = ["One-Punch Man", "Light Yagami", "Naruto Uzumaki", "Sasuke Uchiha"];
+const miscAnimeNonHuman = ["Ryuk", "Pochita"]
 const miscHuman = ["Jon Arbuckle", "Charlie Brown", "Christopher Robin"];
-const miscAnimal = ["Garfield", "Odie (Garfield)", "Nermal (Garfield)", "Pochita", "Snoopy", "Brian Griffin"];
+const miscAnimal = ["Garfield", "Odie (Garfield)", "Nermal (Garfield)", "Snoopy", "Brian Griffin"];
 const drawfeeCharacter = [...drawtectives, ...drawfeeFictionalAnimal];
 const drawfee = [...drawfeeHost, ...drawfeeAnimal, ...drawfeeCharacter];
 const disneyAnimal = [...winnieThePoo, ...mickeyMouse];
 const disneyHuman = [];
 const disney = [...disneyHuman, ...disneyAnimal];
-const animeHuman = [...miscAnime, ...chainsawMan];
-const animeNonHuman = [...miscAnimeNonHuman];
+const animeHuman = [...miscAnime, ...chainsawMan, ...dragonBallZ];
+const animeNonHuman = [...miscAnimeNonHuman, ...dragonBallZNonHuman];
 const animeCharacter = [...animeHuman, ...animeNonHuman];
 const nintendo = [...mario, ...zelda, ...miscNintendo];
 const nintendoAnimal = [...miscNintendoAnimal, ...marioAnimal, ...pokemon];
@@ -86,7 +88,8 @@ const animalAndCharacter = [...animal, ...nonHumanCharacter];
 const objectNoFood = [...transport, ...food, ...housePart, ...clothing];
 const object = [...objectNoFood, ...food];
 const nonPluralObject = [...nonPluralFood];
-const human = [...drawfeeHost, ...humanCharacter, ...celeb];
+const realHuman = [...drawfeeHost, ...celeb]
+const human = [...realHuman, ...humanCharacter];
 const character = [...humanCharacter, ...nonHumanCharacter];
 const sapient = [...human, ...character];
 const action = [...activity];
@@ -105,6 +108,8 @@ const entries = {
     pokemon: pokemon,
     object: object,
     objects: objects,
+    disney: disney,
+    animeCharacter: animeCharacter,
     fruit: fruit,
     activity: activity,
     action: action,
