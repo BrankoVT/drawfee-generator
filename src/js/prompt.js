@@ -41,6 +41,8 @@ const dinosaur = ["tyrannosaurus rex", "stegosaurus", "velociraptor", "tricerato
 const dragonBallZ = ["Goku", "Bulma", "Vegeta", "Trunks"];
 const dragonBallZNonHuman = ["Piccolo", "Frieza"];
 const drawfeeAnimal = ["Joy Cat", "Miss Olive"];
+const drawfeeHumanCharacter = ["Schmidt", "Nando", "Fern (Jacob)", "Porfo", "Spheal (Julia)"];
+const drawfeeNonHumanCharacter = ["Todd from Mario"]
 const drawfeeFictionalAnimal = ["Pissboy", "Todd from Mario"];
 const drawfeeHost = ["Nathan", "Jacob", "Karina", "Julia", "David"];
 const drawtectives = ["Grandan Highforge", "York Rogdul", "Rosé (Drawtectives)", "Jancy True", "Eugene Finch", "Don Jovi", "Kingston Munch", "Villainius", "Harper Justice", "Ogalvy Smythe", "Lotta Justice", "Sorin Justice", "Emery Justice", "Harvey Hornswoggle"]
@@ -51,11 +53,11 @@ const extinctAnimal = ["mammoth", "dodo", "saber-tooth tiger", ...dinosaur];
 const kaiju = ["Godzilla", "King Kong", "Mothra"];
 const mario = ["Mario", "Luigi", "Toad", "Waluigi", "Wario", "Bowser", "Princess Peach", "Princess Daisy", "Princess Rosalina"];
 const marioAnimal = ["Boo (Mario)", "Koopa", "Donkey Kong", "Diddy Kong", "Yoshi (Mario)"]
-const meal = ["egg", "Slim Jim", "bagel", "sandwich", "pancake"];
+const meal = ["egg", "hot dog", "Slim Jim", "bagel", "sandwich", "pancake"];
 const mealNoPlural = ["spaghetti", "lasagne", "bread", "pizza", "beef", "pork", "fries/chips", "fish 'n' chips"];
 const mickeyMouse = ["Mickey Mouse", "Minnie Mouse", "Daisy Duck", "Pete (Mickey Mouse)", "Max Goof", "Donald Duck", "Goofy"];
 const mythicalAnimal = ["dragon", "hydra", "minotaur", "chimera", "unicorn", "pegasus", "griffin", "hippogriff", "phoenix", "kraken"];
-const pokemon = ["Spheal (Pokémon)", "Pikachu", "Blastoise", "Swampert", "Mr Mime", "Sprigatito", "Eevee", "Charizard", "Venusaur", "Snorlax"];
+const pokemon = ["Spheal (Pokémon)", "Bulbasaur", "Pikachu", "Blastoise", "Swampert", "Mr Mime", "Sprigatito", "Eevee", "Charizard", "Venusaur", "Snorlax"];
 const significantOther = ["wife", "husband", "spouse", "boyfriend", "girlfriend", "partner"];
 const simpsons = ["Bart Simpson", "Lisa Simpson", "Homer Simpson", "Marge Simpson", "Maggie Simpson", "Krusty the Clown", "Milhouse"]
 const sonic = ["Sonic", "Dr Eggman", "Tails", "Shadow the Hedgehog", "Silver the Hedgehog", "Jet the Hawk", "Charmy Bee", "Big the Cat", "Blaze the Cat", "Espio the Chameleon", "Amy Rose", "Knuckles the Echidna", "Cream the Rabbit", "Vector the Alligator"];
@@ -81,7 +83,7 @@ const miscNintendo = ["Olimar", "Samus Aren"];
 const miscNintendoAnimal = ["Ridley (Metroid)"];
 
 
-const drawfeeCharacter = [...drawtectives, ...drawfeeFictionalAnimal];
+const drawfeeCharacter = [...drawtectives, ...drawfeeFictionalAnimal, ...drawfeeHumanCharacter, ...drawfeeNonHumanCharacter];
 const drawfee = [...drawfeeHost, ...drawfeeAnimal, ...drawfeeCharacter];
 const disneyAnimal = [...winnieThePoo, ...mickeyMouse];
 const disneyHuman = [];
@@ -91,8 +93,8 @@ const animeNonHuman = [...miscAnimeNonHuman, ...dragonBallZNonHuman];
 const animeCharacter = [...animeHuman, ...animeNonHuman];
 const nintendo = [...mario, ...zelda, ...miscNintendo, ...animalCrossing];
 const nintendoAnimal = [...miscNintendoAnimal, ...marioAnimal, ...pokemon];
-const humanCharacter = [...nintendo, ...starTrek, ...animeHuman, ...miscHuman, ...familyGuy, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
-const nonHumanCharacter = [...sonic, ...animeNonHuman, ...miscNonHuman, ...kaiju, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal, ...disneyAnimal];
+const humanCharacter = [...nintendo, ...drawfeeHumanCharacter, ...starTrek, ...animeHuman, ...miscHuman, ...familyGuy, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
+const nonHumanCharacter = [...sonic, ...drawfeeNonHumanCharacter, ...animeNonHuman, ...miscNonHuman, ...kaiju, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal, ...disneyAnimal];
 const foodNoPlural = [...sweetNoPlural, ...mealNoPlural, ...vegetableNoPlural];
 const foodPlural = [...fruit, ...sweet, ...meal, ...vegetable];
 const food = [...foodPlural, ...foodNoPlural];
@@ -123,6 +125,7 @@ const entries = {
     transport: transport,
     dinosaur: dinosaur,
     pokemon: pokemon,
+    objectNoFoodSingular: objectNoFoodSingular,
     object: object,
     objects: objects,
     disney: disney,
