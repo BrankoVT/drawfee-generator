@@ -23,7 +23,8 @@ const prompts = [
     "%sapient% is eating %foodA% out of a %objectNoFood%",
     "%sapient% will never eat %foodA% ever again after this moment",
     "%sapient% thinking about their childhood %objectNoFood% in their dying moments",
-    "%sapient% is %action%, but only %sapient% seems to care"
+    "%sapient% is %action%, but only %sapient% seems to care",
+    "finally, %sapient% is announced for Smash!"
 ];
 
 // Entries
@@ -32,9 +33,10 @@ const activity = ["fighting", "doing the macarena", "dancing", "singing", "runni
 const animalCrossing = ["Tom Nook", "Timmy Nook", "Tommy Nook", "Raymond (Animal Crossing)", "Ankha (Animal Crossing)"];
 const appliances = ["air fryer", "phone", "flip phone", "floppy disc", "landline", "kitchen robot", "mixer", "blender", "book", "laptop", "computer", "TV", "spork", "spoon", "knife", "fork", "frying pan"];
 const breakingBad = ["Walter White", "Skyler White", "Jesse Pinkman", "Gustavo Fring", "Hank Schrader"];
-const celeb = ["Keanu Reeves", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "The Rock", "John Cena", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
+const celeb = ["Keanu Reeves", "Rowan Atkinson", "Gandhi", "Daniel Radcliffe", "Emma Watson", "Johnny Depp", "Sean Connery", "Angelina Jolie", "Jason Momoa", "Jim Carrey", "Orlando Bloom", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "The Rock", "John Cena", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
 const chainsawMan = ["Makima", "Power (Chainsaw Man)", "Denji (Chainsaw Man)"];
-const clothing = ["skirt", "belt", "cap", "hat", "tophat", "pantaloon", "ring", "bracelet", "hoodie", "sweater", "bowtie", "tie", "T-shirt", "shirt", "dress", "poncho"];
+const clothing = ["skirt", "jacket", "belt", "cap", "hat", "coat", "glove", "waistcoat", "boot", "bikini", "shoe", "tophat", "pantaloon", "ring", "speedo", "bracelet", "hoodie", "sweater", "bowtie", "tie", "T-shirt", "shirt", "dress", "poncho"];
+const clothingNoPlural = ["pants", "trousers", "swimming trunks", "high heels", "pajamas", "shorts", "glasses", "boxer shorts", "knickers", "thigh highs"];
 const dinosaur = ["tyrannosaurus rex", "stegosaurus", "velociraptor", "triceratops", "brontosaurus"];
 const dragonBallZ = ["Goku", "Bulma", "Vegeta", "Trunks"];
 const dragonBallZNonHuman = ["Piccolo", "Frieza"];
@@ -58,6 +60,7 @@ const significantOther = ["wife", "husband", "spouse", "boyfriend", "girlfriend"
 const simpsons = ["Bart Simpson", "Lisa Simpson", "Homer Simpson", "Marge Simpson", "Maggie Simpson", "Krusty the Clown", "Milhouse"]
 const sonic = ["Sonic", "Dr Eggman", "Tails", "Shadow the Hedgehog", "Silver the Hedgehog", "Jet the Hawk", "Charmy Bee", "Big the Cat", "Blaze the Cat", "Espio the Chameleon", "Amy Rose", "Knuckles the Echidna", "Cream the Rabbit", "Vector the Alligator"];
 const spongebob = ["Spongebob Squarepants", "Squidward Tentacles", "Patrick Star", "Pearl Krabs", "K.A.R.E.N. (Spongebob)", "Mrs Puff (Spongebob)", "Larry the Lobster", "Sandy Cheeks", "Plankton (Spongebob)", "Gary (Spongebob)", "Squilliam Fancyson", "Eugene Krabs"];
+const starTrek = ["Spock", "Captain Kirk (Star Trek)", "Picard (Star Trek)"]
 const superHero = ["Deadpool", "Ant Man", "Robin (Batman)", "Bat Girl", "Spider-Man", "Iron Man", "Mr Incredible", "Elastigirl", "Frozone", "Captain America", "Batman", "Wonder Woman", "Superman", "Black Widow"];
 const superVillain = ["The Joker", "Thanos", "Mysterio", "The Riddler", "Two-Face", "Harley Quinn", "Poison Ivy", "The Penguin (Batman)", "Mr Freeze"]
 const sweet = ["Mars bar", "ice cream"];
@@ -70,7 +73,7 @@ const zelda = ["Ganondorf", "Link", "Zelda", "Tingle"];
 
 const animal = ["lion", "barracuda", "ox", "badger", "moose", "slug", "parrot", "kiwi (animal)", "snail", "horseshoe crab", "puffin", "cobra", "rattle snake", "owl", "bumblebee", "wasp", "bee", "mosquito", "daddy long-legs", "dog", "shrimp", "panther", "salamander", "chihuahua", "bat", "goldfish", "pufferfish", "frog", "alpaca", "beagle", "German shepherd", "pitbull", "duck", "swan", "goose", "bison", "llama", "mule", "donkey", "horse", "naked mole rat", "jaguar", "ladybug", "whale", "walrus", "seal", "blob fish", "coral", "chimp", "polar bear", "kangaroo", "spider", "butterfly", "ostrich", "emu", "cat", "fish", "jellyfish", "crab", "pigeon", "ape", "iguana", "lizard", "tortoise", "bird", "eagle", "hawk", "squid", "octopus", "sea star", "ferret", "mouse", "rat", "opossum", "cow", "sheep", "pig", "turtle", "shark", "tiger", "elephant", "giraffe", "zebra", "bear", "monkey", "penguin", "dolphin", "koala", "panda", "hippopotamus", "wolf", "deer", "rabbit", "fox", "cheetah", "rhinoceros", "gorilla", "squirrel", ...extinctAnimal, ...mythicalAnimal];
 
-const miscHuman = ["Jon Arbuckle", "Charlie Brown", "Christopher Robin", "Popeye the Sailor Man"];
+const miscHuman = ["Jon Arbuckle", "James Bond", "Mr Bean", "Santa Claus", "Captain Jack Sparrow", "The Doctor (Doctor Who)", "Charlie Brown", "Christopher Robin", "Popeye the Sailor Man"];
 const miscNonHuman = ["Garfield", "Odie (Garfield)", "Nermal (Garfield)", "Snoopy", "Brian Griffin"];
 const miscAnime = ["One-Punch Man", "Light Yagami", "Naruto Uzumaki", "Sasuke Uchiha"];
 const miscAnimeNonHuman = ["Ryuk", "Pochita"];
@@ -88,24 +91,27 @@ const animeNonHuman = [...miscAnimeNonHuman, ...dragonBallZNonHuman];
 const animeCharacter = [...animeHuman, ...animeNonHuman];
 const nintendo = [...mario, ...zelda, ...miscNintendo, ...animalCrossing];
 const nintendoAnimal = [...miscNintendoAnimal, ...marioAnimal, ...pokemon];
-const humanCharacter = [...nintendo, ...animeHuman, ...miscHuman, ...familyGuy, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
+const humanCharacter = [...nintendo, ...starTrek, ...animeHuman, ...miscHuman, ...familyGuy, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
 const nonHumanCharacter = [...sonic, ...animeNonHuman, ...miscNonHuman, ...kaiju, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal, ...disneyAnimal];
 const foodNoPlural = [...sweetNoPlural, ...mealNoPlural, ...vegetableNoPlural];
-const pluralFood = [...fruit, ...sweet, ...meal, ...vegetable];
-const food = [...pluralFood, ...foodNoPlural];
+const foodPlural = [...fruit, ...sweet, ...meal, ...vegetable];
+const food = [...foodPlural, ...foodNoPlural];
 const housePart = [...furniture, ...appliances];
 const animalAndCharacter = [...animal, ...nonHumanCharacter];
-const objectNoFood = [...transport, ...food, ...housePart, ...clothing];
-const object = [...objectNoFood, ...food];
-const nonPluralObject = [...foodNoPlural];
+const objectNoFoodPlural = [...transport, ...housePart, ...clothing];
+const objectNoFoodNoPlural = [...clothingNoPlural];
+const objectNoPlural = [...foodNoPlural, ...objectNoFoodNoPlural];
+const objectPlural = [...food, ...objectNoFoodPlural];
+const object = [...objectPlural, ...objectNoPlural];
 const realHuman = [...drawfeeHost, ...celeb]
 const human = [...realHuman, ...humanCharacter];
 const character = [...humanCharacter, ...nonHumanCharacter];
 const sapient = [...human, ...character];
 const action = [...activity];
 
-const objects = [...object.map(pluralize), ...nonPluralObject];
-const foodA = [...foodNoPlural, ...pluralFood.map(addA)];
+const objects = [...objectPlural.map(pluralise), ...objectNoPlural];
+const objectNoFood = [...objectNoFoodPlural.map(pluralise), ...objectNoFoodNoPlural];
+const foodA = [...foodNoPlural, ...foodPlural.map(addA)];
 
 // Define the entries
 const entries = {
@@ -168,8 +174,8 @@ document.addEventListener('DOMContentLoaded', function () {
     newPromptButton.addEventListener('click', displayPrompt);
 });
 
-// Function to pluralize a word
-function pluralize(word) {
+// Function to pluralise a word
+function pluralise(word) {
     if (word.endsWith("s")) {
         return word + "es";
     } else if (word.endsWith("y")) {
