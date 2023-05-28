@@ -1,28 +1,125 @@
 // basic layout of all pages
 
-* {
-  font-family: "Roboto Light", sans-serif;
+::selection {
+  background-color: #000;
+  color: #fff;
+}
 
-  nav {
+html, body {
+  height: 100%;
+}
+
+body#promptPage {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  background-color: #f1f1f1;
+  font-family: "Roboto Light", sans-serif;
+  font-weight: 1000;
+
+  .navbar {
     text-transform: uppercase;
-    background-color: inherit;
-    color: #ffffff;
+    background-color: #d02337;
+    color: #fff;
     overflow: visible;
-    max-height: 5rem;
+
     h1 {
       font-size: 2rem;
       width: 35%;
+      font-weight: inherit;
+    }
+    .dropdown-menu {
+      background-color: #d02337;
+
+      .dropdown-item {
+        font-weight: inherit;
+        color: #0000008c;
+        &:hover {
+          background-color: inherit;
+          color: rgba(0, 0, 0, 0.7);
+        }
+        &.active {
+          background-color: inherit;
+          color: #000;
+        }
+      }
     }
   }
 
   main {
     margin-top: 6rem;
+    background-color: inherit;
+    flex: 1;
+
+    h2 {
+      font-weight: inherit;
+    }
+
     li p {
       line-height: 0;
     }
+
+    .announcePrompt {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
     .prompt {
-      height: 200px;
-      padding-top: 2rem;
+      margin: 2rem 0;
+      display: flex;
+      height: 75%;
+      padding: 2rem 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        color: #d02337;
+        text-align: center;
+        background-color: inherit;
+        font-weight: 1000;
+        font-size: 1rem;
+        @media screen and (min-width: 900px)  {
+          @media screen and (min-height: 400px) {
+            font-size: 2rem;
+            @media screen and (min-height: 600px) {
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    position: fixed;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+
+    .btn {
+      line-height: 0;
+      font-weight: inherit;
+      background-color: #fff;
+
+      &:hover p {
+        transform: rotate(-5deg);
+      }
+
+      &:active p {
+        transform: rotate(10deg);
+        transition: transform;
+      }
+
+      p {
+        line-height: 0;
+        transition: transform 0.3s ease-in-out;
+        margin: 20px;
+      }
     }
   }
 }

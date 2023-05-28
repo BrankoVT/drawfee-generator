@@ -94,6 +94,7 @@ const entries = {
     objects: objects,
     fruit: fruit,
     activity: activity,
+    action: action,
     extinctAnimal: extinctAnimal,
     mythicalAnimal: mythicalAnimal,
     significantOther: significantOther,
@@ -136,6 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add event listener to the button
     let newPromptButton = document.getElementById('newPromptButton');
     newPromptButton.addEventListener('click', displayPrompt);
+    newPromptButton.addEventListener('click', spin);
 });
 
 // Function to pluralize a word
