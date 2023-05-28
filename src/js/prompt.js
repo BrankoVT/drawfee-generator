@@ -16,7 +16,9 @@ const prompts = [
     "%character% will never forgive %character% for what they did",
     "%sapient% was eating a %food% before rudely being interrupted by %sapient%",
     "%sapient% absolutely hates %object%s",
-    "you do not want to know %sapient%'s opinion on %object%s"
+    "you do not want to know %sapient%'s opinion on %object%s",
+    "Presidential alert, the girls are %activity%",
+    "why is %sapient% %action%?"
 ];
 
 // Entries
@@ -45,6 +47,7 @@ const marioAnimal = ["Boo (Mario)", "Koopa", "Donkey Kong", "Diddy Kong", "Yoshi
 const zelda = ["Ganondorf", "Link", "Zelda", "Tingle"];
 const miscNintendo = ["Olimar", "Samus Aren"];
 const miscNintendoAnimal = ["Ridley (Metroid)"];
+const activity = ["fighting", "dancing", "singing", "running", "crying", "jamming", "stealing stuff", "sleeping", "dying", "being obnoxious", "kissing", "hugging", "cuddling", "being cute", "being annoying"]
 const drawfeeCharacter = [...drawtectives, ...drawfeeFictionalAnimal];
 const drawfee = [...drawfeeHost, ...drawfeeAnimal, ...drawfeeCharacter];
 const nintendo = [...mario, ...zelda, ...miscNintendo];
@@ -57,6 +60,7 @@ const object = [...transport, ...food];
 const human = [...drawfeeHost, ...humanCharacter, ...celeb];
 const character = [...humanCharacter, ...nonHumanCharacter];
 const sapient = [...human, ...character];
+const action = [...activity]
 
 // Define the entries
 const entries = {
@@ -69,6 +73,7 @@ const entries = {
     pokemon: pokemon,
     object: object,
     fruit: fruit,
+    activity: activity,
     extinctAnimal: extinctAnimal,
     mythicalAnimal: mythicalAnimal,
     food: food,
