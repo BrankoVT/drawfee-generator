@@ -31,16 +31,19 @@ body#promptPage {
       width: 35%;
       font-weight: inherit;
     }
+
     .dropdown-menu {
       background-color: #d02337;
 
       .dropdown-item {
         font-weight: inherit;
         color: #0000008c;
+
         &:hover {
           background-color: inherit;
           color: rgba(0, 0, 0, 0.7);
         }
+
         &.active {
           background-color: inherit;
           color: #000;
@@ -83,7 +86,7 @@ body#promptPage {
         background-color: inherit;
         font-weight: 1000;
         font-size: 1rem;
-        @media screen and (min-width: 900px)  {
+        @media screen and (min-width: 900px) {
           @media screen and (min-height: 400px) {
             font-size: 2rem;
             @media screen and (min-height: 600px) {
@@ -121,5 +124,37 @@ body#promptPage {
         margin: 20px;
       }
     }
+  }
+}
+
+
+.index {
+  main {
+    .fly-in-image {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-top: 0;
+      img {
+        position: absolute;
+        top: -100%;
+        animation: flyIn 0.8s forwards;
+      }
+    }
+  }
+}
+
+
+@keyframes flyIn {
+  0% {
+    top: 200%;
+    transform: scale(0) rotate(720deg);
+  }
+  100% {
+    top: 5rem;
+    transform: scale(1) rotate(0);
   }
 }

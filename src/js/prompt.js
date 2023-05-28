@@ -137,7 +137,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add event listener to the button
     let newPromptButton = document.getElementById('newPromptButton');
     newPromptButton.addEventListener('click', displayPrompt);
-    newPromptButton.addEventListener('click', spin);
 });
 
 // Function to pluralize a word
