@@ -20,7 +20,7 @@ const prompts = [
     "Presidential alert, the girls are %activity%",
     "why is %sapient% %action%?",
     "%sapient%'s %significantOther% really likes their %object%",
-    "%sapient% is eating %foodA% out of a %objectNoFood%",
+    "%sapient% is eating %foodA% out of a %objectNoFoodSingular%",
     "%sapient% will never eat %foodA% ever again after this moment",
     "%sapient% thinking about their childhood %objectNoFood% in their dying moments",
     "%sapient% is %action%, but only %sapient% seems to care",
@@ -100,6 +100,7 @@ const housePart = [...furniture, ...appliances];
 const animalAndCharacter = [...animal, ...nonHumanCharacter];
 const objectNoFoodPlural = [...transport, ...housePart, ...clothing];
 const objectNoFoodNoPlural = [...clothingNoPlural];
+const objectNoFoodSingular = [...objectNoFoodNoPlural, ...objectNoFoodNoPlural];
 const objectNoPlural = [...foodNoPlural, ...objectNoFoodNoPlural];
 const objectPlural = [...food, ...objectNoFoodPlural];
 const object = [...objectPlural, ...objectNoPlural];
