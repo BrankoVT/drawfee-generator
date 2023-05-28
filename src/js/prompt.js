@@ -17,7 +17,7 @@ const prompts = [
     "%sapient% was eating %foodA% before rudely being interrupted by %sapient%",
     "%sapient% absolutely hates %objects%",
     "you do not want to know %sapient%'s opinion on %objects%",
-    "Presidential alert, the girls are %activity%",
+    "Presidential alert, the girls are %action%",
     "why is %sapient% %action%?",
     "%sapient%'s %significantOther% really likes their %object%",
     "%sapient% is eating %foodA% out of %objectNoFoodSingularA%",
@@ -113,7 +113,7 @@ const sapient = [...human, ...character];
 const action = [...activity];
 
 const objects = [...objectPlural.map(pluralise), ...objectNoPlural];
-const objectsA = [...object.map(addA)];
+const objectA = [...object.map(addA)];
 const objectNoFood = [...objectNoFoodPlural.map(pluralise), ...objectNoFoodNoPlural];
 const foodA = [...foodNoPlural, ...foodPlural.map(addA)];
 const objectNoFoodSingularA = [...objectNoFoodSingular.map(addA)];
@@ -130,6 +130,7 @@ const entries = {
     objectNoFoodSingular: objectNoFoodSingular,
     objectNoFoodSingularA: objectNoFoodSingularA,
     object: object,
+    objectA: objectA,
     objects: objects,
     disney: disney,
     animeCharacter: animeCharacter,
