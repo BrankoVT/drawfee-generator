@@ -118,7 +118,7 @@ const objects = [...objectPlural.map(pluralise), ...objectNoPlural];
 const objectA = [...object.map(addA)];
 const objectNoFood = [...objectNoFoodPlural.map(pluralise), ...objectNoFoodNoPlural];
 const foodA = [...foodNoPlural, ...foodPlural.map(addA)];
-const objectNoFoodSingularA = [...objectNoFoodSingular.map(addA)];
+const objectNoFoodSingularA = [...objectNoFoodPlural.map(addA), ...objectNoFoodNoPlural];
 
 // Define the entries
 const entries = {
