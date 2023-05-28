@@ -9,7 +9,7 @@ html, body {
   height: 100%;
 }
 
-body#promptPage {
+body#promptPage, body.index {
   overflow: hidden;
   display: flex;
   flex-direction: column;
