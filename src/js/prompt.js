@@ -8,6 +8,7 @@ const prompts = [
     "a %nonHuman% gijinka",
     "%character% from memory",
     "the %character% x %character% ship",
+    "a %sapient% and %sapient% fusion",
     "%sapient% with a pet %animalAndCharacter%",
     "%sapient% is wanted by the police",
     "%sapient% in a %food% eating contest",
@@ -40,7 +41,7 @@ const adjectiveTerrible = ["terrible", "irredeemable", "unforgivable", "sinful",
 const animalCrossing = ["Tom Nook", "Timmy Nook", "Tommy Nook", "Raymond (Animal Crossing)", "Ankha (Animal Crossing)"];
 const appliances = ["air fryer", "phone", "flip phone", "floppy disc", "landline", "kitchen robot", "mixer", "blender", "book", "laptop", "computer", "TV", "spork", "spoon", "knife", "fork", "frying pan"];
 const breakingBad = ["Walter White", "Skyler White", "Jesse Pinkman", "Gustavo Fring", "Hank Schrader"];
-const celeb = ["Keanu Reeves", "Mr Beast", "Rowan Atkinson", "Gandhi", "Daniel Radcliffe", "Emma Watson", "Johnny Depp", "Sean Connery", "Angelina Jolie", "Jason Momoa", "Jim Carrey", "Orlando Bloom", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "The Rock", "John Cena", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
+const celeb = ["Keanu Reeves", "Mr Beast", "Rowan Atkinson", "Gandhi", "Daniel Radcliffe", "Emma Watson", "Johnny Depp", "Sean Connery", "Angelina Jolie", "Jason Momoa", "Jim Carrey", "Orlando Bloom", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "the Rock", "John Cena", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
 const chainsawMan = ["Makima", "Power (Chainsaw Man)", "Denji (Chainsaw Man)"];
 const clothing = ["skirt", "jacket", "belt", "cap", "hat", "coat", "glove", "waistcoat", "boot", "bikini", "shoe", "tophat", "pantaloon", "ring", "speedo", "bracelet", "hoodie", "sweater", "bowtie", "tie", "T-shirt", "shirt", "dress", "poncho"];
 const clothingNoPlural = ["pants", "trousers", "swimming trunks", "high heels", "pajamas", "shorts", "glasses", "boxer shorts", "knickers", "thigh highs"];
@@ -49,8 +50,8 @@ const dinosaur = ["tyrannosaurus rex", "stegosaurus", "velociraptor", "tricerato
 const dragonBallZ = ["Goku", "Bulma", "Vegeta", "Trunks"];
 const dragonBallZNonHuman = ["Piccolo", "Frieza"];
 const drawfeeAnimal = ["Joy Cat", "Miss Olive"];
-const drawfeeHumanCharacter = ["Schmidt", "Nando", "Fern (Jacob)", "Porfo", "Spheal (Julia)"];
-const drawfeeNonHumanCharacter = ["Todd from Mario"]
+const drawfeeHumanCharacter = ["Schmidt", "Nando", "Fern (Jacob)", "Luce", "Porfo", "Spheal (Julia)"];
+const drawfeeNonHumanCharacter = ["Todd from Mario", "Jacob horse", "Burgoo King"]
 const drawfeeFictionalAnimal = ["Pissboy", "Todd from Mario"];
 const drawfeeHost = ["Nathan", "Jacob", "Karina", "Julia", "David"];
 const drawtectives = ["Grandan Highforge", "York Rogdul", "Rosé (Drawtectives)", "Jancy True", "Eugene Finch", "Don Jovi", "Kingston Munch", "Villainius", "Harper Justice", "Ogalvy Smythe", "Lotta Justice", "Sorin Justice", "Emery Justice", "Harvey Hornswoggle"]
@@ -74,19 +75,19 @@ const sonic = ["Sonic", "Tails", "Shadow the Hedgehog", "Silver the Hedgehog", "
 const spongebob = ["Spongebob Squarepants", "Squidward Tentacles", "Patrick Star", "Pearl Krabs", "K.A.R.E.N. (Spongebob)", "Mrs Puff (Spongebob)", "Larry the Lobster", "Sandy Cheeks", "Plankton (Spongebob)", "Gary (Spongebob)", "Squilliam Fancyson", "Eugene Krabs"];
 const starTrek = ["Spock", "Captain Kirk (Star Trek)", "Picard (Star Trek)"]
 const superHero = ["Deadpool", "Ant Man", "Robin (Batman)", "Bat Girl", "Spider-Man", "Iron Man", "Mr Incredible", "Elastigirl", "Frozone", "Captain America", "Batman", "Wonder Woman", "Superman", "Black Widow"];
-const superVillain = ["The Joker", "Thanos", "Mysterio", "The Riddler", "Two-Face", "Harley Quinn", "Poison Ivy", "The Penguin (Batman)", "Mr Freeze"]
+const superVillain = ["the Joker", "Thanos", "Mysterio", "the Riddler", "Two-Face", "Harley Quinn", "Poison Ivy", "the Penguin (Batman)", "Mr Freeze"]
 const sweet = ["Mars bar", "ice cream"];
 const sweetNoPlural = ["chocolate", "candy", "chips/crisps"];
 const transport = ["airplane", "car", "bike", "motorbike", "boat", "container ship", "train", "subway", "helicopter", "truck", "scooter", "bus", "yacht", "hovercraft", "ferry", "rocket", "zeppelin", "hot air balloon", "gondola", "tram"];
 const vegetable = ["potato", "sugar beet", "beet", "onion", "cucumber", "pickle", "egg plant", "carrot"];
 const vegetableNoPlural = ["lettuce", "broccoli", "cauliflower", "spinach", "peas", "garlic"]
-const winnieThePoo = ["Winnie The Poo", "Ior (Winnie the Poo)", "Tigger", "Piglet (Winnie the Poo)"];
+const winnieThePoo = ["Winnie the Poo", "Ior (Winnie the Poo)", "Tigger", "Piglet (Winnie the Poo)"];
 const zelda = ["Ganondorf", "Link", "Zelda", "Tingle"];
 
 const animal = ["lion", "barracuda", "ox", "badger", "moose", "slug", "parrot", "kiwi (animal)", "snail", "horseshoe crab", "puffin", "cobra", "rattle snake", "owl", "bumblebee", "wasp", "bee", "mosquito", "daddy long-legs", "dog", "shrimp", "panther", "salamander", "chihuahua", "bat", "goldfish", "pufferfish", "frog", "alpaca", "beagle", "German shepherd", "pitbull", "duck", "swan", "goose", "bison", "llama", "mule", "donkey", "horse", "naked mole rat", "jaguar", "ladybug", "whale", "walrus", "seal", "blob fish", "coral", "chimp", "polar bear", "kangaroo", "spider", "butterfly", "ostrich", "emu", "cat", "fish", "jellyfish", "crab", "pigeon", "ape", "iguana", "lizard", "tortoise", "bird", "eagle", "hawk", "squid", "octopus", "sea star", "ferret", "mouse", "rat", "opossum", "cow", "sheep", "pig", "turtle", "shark", "tiger", "elephant", "giraffe", "zebra", "bear", "monkey", "penguin", "dolphin", "koala", "panda", "hippopotamus", "wolf", "deer", "rabbit", "fox", "cheetah", "rhinoceros", "gorilla", "squirrel", ...extinctAnimal, ...mythicalAnimal];
 
-const miscHuman = ["Jon Arbuckle", "Beelzebub", "Satan", "God", "Dr Eggman", "James Bond", "Mr Bean", "Santa Claus", "Captain Jack Sparrow", "The Doctor (Doctor Who)", "Charlie Brown", "Christopher Robin", "Popeye the Sailor Man"];
-const miscNonHuman = ["Garfield", "Ponygon", "Odie (Garfield)", "Nermal (Garfield)", "Snoopy", "Brian Griffin"];
+const miscHuman = ["Jon Arbuckle", "Beelzebub", "the Onceler", "Satan", "God", "Dr Eggman", "James Bond", "Mr Bean", "Santa Claus", "Captain Jack Sparrow", "the Doctor (Doctor Who)", "Charlie Brown", "Christopher Robin", "Popeye the Sailor Man"];
+const miscNonHuman = ["Garfield", "Ponygon", "the Grinch", "the Lorax", "Odie (Garfield)", "Nermal (Garfield)", "Snoopy", "Brian Griffin"];
 const miscAnime = ["One-Punch Man", "Light Yagami", "Naruto Uzumaki", "Sasuke Uchiha"];
 const miscAnimeNonHuman = ["Ryuk", "Pochita"];
 const miscNintendo = ["Olimar", "Samus Aren"];
