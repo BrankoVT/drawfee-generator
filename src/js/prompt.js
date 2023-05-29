@@ -60,7 +60,7 @@ const fruit = ["dragon fruit", "blackberry", "raspberry", "pomegranate", "cherry
 const furniture = ["closet", "fridge", "freezer", "oven", "microwave", "furnace", "sink", "fireplace", "dishwasher", "cupboard", "sofa", "night stand", "bed", "love seat", "desk", "chair", "bookcase", "barbeque"];
 const extinctAnimal = ["mammoth", "dodo", "saber-tooth tiger", ...dinosaur];
 const kaiju = ["Godzilla", "King Kong", "Mothra"];
-const macguffin = ["the Ring (Lord of the Rings)", "the Dragon Balls", "the Triforce"]
+const macguffin = ["the Ring (Lord of the Rings)", "the One Piece", "the Dragon Balls", "the Triforce"]
 const mario = ["Mario", "Luigi", "Toad", "Waluigi", "Wario", "Bowser", "Princess Peach", "Princess Daisy", "Princess Rosalina"];
 const marioAnimal = ["Boo (Mario)", "Koopa", "Donkey Kong", "Diddy Kong", "Yoshi (Mario)"]
 const meal = ["egg", "hot dog", "Slim Jim", "bagel", "sandwich", "pancake"];
@@ -69,6 +69,7 @@ const mickeyMouse = ["Mickey Mouse", "Minnie Mouse", "Daisy Duck", "Pete (Mickey
 const muppet = ["Elmo", "Rizzo the Rat", "Cookie Monster", "Fozzie Bear", "Gonzo", "Beaker (Muppets)", "Big Bird (Sesame Street)", "Kermit the Frog", "Miss Piggy", "Animal (Muppets)", "Bert (Sesame Street)", "Ernie (Sesame Street)"]
 const mythicalAnimal = ["dragon", "hydra", "minotaur", "chimera", "unicorn", "pegasus", "griffin", "hippogriff", "phoenix", "kraken"];
 const pokemon = ["Spheal (Pokémon)", "Bulbasaur", "Pikachu", "Blastoise", "Swampert", "Mr Mime", "Sprigatito", "Eevee", "Charizard", "Venusaur", "Snorlax"];
+const room = ["garden", "nursery", "bathroom", "garage", "yard", "basement", "attic", "office", "toy room", "bedroom", "kitchen", "living room", "gym", "observatory", "lavatory"];
 const significantOther = ["wife", "husband", "spouse", "boyfriend", "girlfriend", "partner"];
 const simpsons = ["Bart Simpson", "Lisa Simpson", "Homer Simpson", "Marge Simpson", "Maggie Simpson", "Krusty the Clown", "Milhouse"]
 const sonic = ["Sonic", "Tails", "Shadow the Hedgehog", "Silver the Hedgehog", "Jet the Hawk", "Charmy Bee", "Big the Cat", "Blaze the Cat", "Espio the Chameleon", "Amy Rose", "Knuckles the Echidna", "Cream the Rabbit", "Vector the Alligator"];
@@ -111,6 +112,9 @@ const nonHumanCharacter = [...sonic, ...digimon, ...muppet, ...drawfeeNonHumanCh
 const foodNoPlural = [...sweetNoPlural, ...mealNoPlural, ...vegetableNoPlural];
 const foodPlural = [...fruit, ...sweet, ...meal, ...vegetable];
 const food = [...foodPlural, ...foodNoPlural];
+const ownedPlace = [...room];
+const publicPlace = [];
+const place = [...ownedPlace, ...publicPlace];
 const housePart = [...furniture, ...appliances];
 const animalAndCharacter = [...animal, ...nonHumanCharacter];
 const objectNoFoodPlural = [...transport, ...housePart, ...clothing, ...weapon];
@@ -142,6 +146,7 @@ const entries = {
     superHero: superHero,
     drawfee: drawfee,
     human: human,
+    place: place,
     transport: transport,
     verb: verb,
     dinosaur: dinosaur,
