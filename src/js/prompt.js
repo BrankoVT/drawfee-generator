@@ -17,13 +17,13 @@ const prompts = [
     "%sapient% was eating %foodA% before rudely being interrupted by %sapient%",
     "%sapient% absolutely hates %objects%",
     "you do not want to know %sapient%'s opinion on %objects%",
-    "Presidential alert, the girls are %action%",
-    "why is %sapient% %action%?",
+    "Presidential alert, the girls are %verb%",
+    "why is %sapient% %verb%?",
     "%sapient%'s %significantOther% really likes their %object%",
     "%sapient% is eating %foodA% out of %objectNoFoodSingularA%",
     "%sapient% will never eat %foodA% ever again after this moment",
     "%sapient% thinking about their childhood %objectNoFood% in their dying moments",
-    "%sapient% is %action%, but only %sapient% seems to care",
+    "%sapient% is %verb%, but only %sapient% seems to care",
     "finally, %sapient% is announced for Smash!",
     "%sapient% has finally found the %adjectiveGreat% %object%",
     "%sapient% thought they found the %adjectiveGreat% %object%, but it was actually %adjectiveTerrible%",
@@ -32,9 +32,11 @@ const prompts = [
 
 // Entries
 const aceAttorney = ["Phoenix Wright", "Apollo Justice", "Miles Edgeworth", "Manfred von Karma", "Winston Payne", "Franziska von Karma", "Larry Butz", "Maya Fey"]
-const activity = ["fighting", "doing the macarena", "dancing", "singing", "running", "crying", "jamming", "stealing stuff", "sleeping", "dying", "being obnoxious", "kissing", "hugging", "cuddling", "being cute", "being annoying"];
-const adjectiveGreat = ["great", "sacred", "holy", "pure", "perfect", "master", "heavenly", "golden", "silver"];
-const adjectiveTerrible = ["terrible", "dire", "unholy", "cursed", "devilish", "satanic", "hellish", "rotten", "infernal"];
+const activity = ["fighting", "doing the macarena", "dancing", "singing", "running", "crying", "jamming", "stealing stuff", "sleeping", "dying", "kissing", "hugging", "cuddling"];
+const adjectiveGreat = ["great", "graceful", "sacred", "unworthy", "holy", "pure", "perfect", "master", "heavenly", "golden", "silver"];
+const adjectiveNegative = ["bad", "sweaty", "disappointing", "ugly", "mean", "unpleasant", "obnoxious", "annoying", "stinky", "dumb", "idiotic", "underwhelming", "overwhelming"];
+const adjectivePositive = ["good", "cute", "nice", "funny", "pleasant", "beautiful", "pretty", "handsome"];
+const adjectiveTerrible = ["terrible", "irredeemable", "unforgivable", "sinful", "dire", "disgraceful", "horrible", "unholy", "cursed", "devilish", "satanic", "hellish", "rotten", "infernal"];
 const animalCrossing = ["Tom Nook", "Timmy Nook", "Tommy Nook", "Raymond (Animal Crossing)", "Ankha (Animal Crossing)"];
 const appliances = ["air fryer", "phone", "flip phone", "floppy disc", "landline", "kitchen robot", "mixer", "blender", "book", "laptop", "computer", "TV", "spork", "spoon", "knife", "fork", "frying pan"];
 const breakingBad = ["Walter White", "Skyler White", "Jesse Pinkman", "Gustavo Fring", "Hank Schrader"];
@@ -114,22 +116,22 @@ const objectNoFoodSingular = [...objectNoFoodNoPlural, ...objectNoFoodNoPlural];
 const objectNoPlural = [...foodNoPlural, ...objectNoFoodNoPlural];
 const objectPlural = [...foodPlural, ...objectNoFoodPlural];
 const object = [...objectPlural, ...objectNoPlural];
-const adjectiveGood = [...adjectiveGreat];
-const adjectiveBad = [...adjectiveTerrible];
+const adjectiveGood = [...adjectiveGreat, ...adjectivePositive];
+const adjectiveBad = [...adjectiveTerrible, ...adjectiveNegative];
 const adjectiveExtreme = [...adjectiveGood, ...adjectiveBad];
-const adjectiveMild = [];
+const adjectiveMild = [...adjectiveNegative, ...adjectivePositive];
 const adjective = [...adjectiveExtreme, ...adjectiveMild];
 const realHuman = [...drawfeeHost, ...celeb];
 const human = [...realHuman, ...humanCharacter];
 const character = [...humanCharacter, ...nonHumanCharacter];
 const sapient = [...human, ...character];
-const action = [...activity];
 
 const objects = [...objectPlural.map(pluralise), ...objectNoPlural];
 const objectA = [...object.map(addA)];
 const objectNoFood = [...objectNoFoodPlural.map(pluralise), ...objectNoFoodNoPlural];
 const foodA = [...foodNoPlural, ...foodPlural.map(addA)];
 const objectNoFoodSingularA = [...objectNoFoodPlural.map(addA), ...objectNoFoodNoPlural];
+const verb = [...activity, ...adjective.map(addBeing)];
 
 // Define the entries
 const entries = {
@@ -138,6 +140,7 @@ const entries = {
     drawfee: drawfee,
     human: human,
     transport: transport,
+    verb: verb,
     dinosaur: dinosaur,
     pokemon: pokemon,
     objectNoFoodSingular: objectNoFoodSingular,
@@ -157,7 +160,6 @@ const entries = {
     fruit: fruit,
     activity: activity,
     objectNoFood: objectNoFood,
-    action: action,
     extinctAnimal: extinctAnimal,
     mythicalAnimal: mythicalAnimal,
     significantOther: significantOther,
@@ -220,6 +222,10 @@ function pluralise(word) {
     }
 }
 
+function addBeing(word) {
+    return "being " + word;
+}
+
 function startsWithVowel(word) {
     const vowelRegex = /^[aeiou]/i; // Case-insensitive regex for vowels
     return vowelRegex.test(word);
@@ -232,5 +238,13 @@ function addA(word) {
         return "a " + word;
     }
 }
+
+/*========= countPrompts =========*/
+function countPrompts() {
+    return prompts.length;
+}
+
+console.log(countPrompts() + " prompts available")
+
 
 displayPrompt();
