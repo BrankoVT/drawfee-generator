@@ -52,6 +52,7 @@ const fruit = ["dragon fruit", "blackberry", "raspberry", "pomegranate", "cherry
 const furniture = ["closet", "fridge", "freezer", "oven", "microwave", "furnace", "sink", "fireplace", "dishwasher", "cupboard", "sofa", "night stand", "bed", "love seat", "desk", "chair", "bookcase", "barbeque"];
 const extinctAnimal = ["mammoth", "dodo", "saber-tooth tiger", ...dinosaur];
 const kaiju = ["Godzilla", "King Kong", "Mothra"];
+const macguffin = ["the Ring (Lord of the Rings)", "the Dragon Balls", "the Triforce"]
 const mario = ["Mario", "Luigi", "Toad", "Waluigi", "Wario", "Bowser", "Princess Peach", "Princess Daisy", "Princess Rosalina"];
 const marioAnimal = ["Boo (Mario)", "Koopa", "Donkey Kong", "Diddy Kong", "Yoshi (Mario)"]
 const meal = ["egg", "hot dog", "Slim Jim", "bagel", "sandwich", "pancake"];
@@ -103,7 +104,7 @@ const food = [...foodPlural, ...foodNoPlural];
 const housePart = [...furniture, ...appliances];
 const animalAndCharacter = [...animal, ...nonHumanCharacter];
 const objectNoFoodPlural = [...transport, ...housePart, ...clothing];
-const objectNoFoodNoPlural = [...clothingNoPlural];
+const objectNoFoodNoPlural = [...clothingNoPlural, ...macguffin];
 const objectNoFoodSingular = [...objectNoFoodNoPlural, ...objectNoFoodNoPlural];
 const objectNoPlural = [...foodNoPlural, ...objectNoFoodNoPlural];
 const objectPlural = [...foodPlural, ...objectNoFoodPlural];
@@ -150,8 +151,7 @@ const entries = {
     character: character,
     sapient: sapient,
     animalAndCharacter: animalAndCharacter,
-    nonHuman: [...object, ...animal],
-    any: [...drawfee, ...superHero, ...transport]
+    nonHuman: [...object, ...animal]
 };
 
 
