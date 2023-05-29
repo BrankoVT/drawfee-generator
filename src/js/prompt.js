@@ -24,12 +24,17 @@ const prompts = [
     "%sapient% will never eat %foodA% ever again after this moment",
     "%sapient% thinking about their childhood %objectNoFood% in their dying moments",
     "%sapient% is %action%, but only %sapient% seems to care",
-    "finally, %sapient% is announced for Smash!"
+    "finally, %sapient% is announced for Smash!",
+    "%sapient% has finally found the %adjectiveGreat% %object%",
+    "%sapient% thought they found the %adjectiveGreat% %object%, but it was actually %adjectiveTerrible%",
+    "the battle was decided long ago, when %sapient% got their hands on the %adjectiveExtreme% %object%"
 ];
 
 // Entries
 const aceAttorney = ["Phoenix Wright", "Apollo Justice", "Miles Edgeworth", "Manfred von Karma", "Winston Payne", "Franziska von Karma", "Larry Butz", "Maya Fey"]
 const activity = ["fighting", "doing the macarena", "dancing", "singing", "running", "crying", "jamming", "stealing stuff", "sleeping", "dying", "being obnoxious", "kissing", "hugging", "cuddling", "being cute", "being annoying"];
+const adjectiveGreat = ["great", "sacred", "holy", "pure", "perfect", "master", "heavenly", "golden", "silver"];
+const adjectiveTerrible = ["terrible", "dire", "unholy", "cursed", "devilish", "satanic", "hellish", "rotten", "infernal"];
 const animalCrossing = ["Tom Nook", "Timmy Nook", "Tommy Nook", "Raymond (Animal Crossing)", "Ankha (Animal Crossing)"];
 const appliances = ["air fryer", "phone", "flip phone", "floppy disc", "landline", "kitchen robot", "mixer", "blender", "book", "laptop", "computer", "TV", "spork", "spoon", "knife", "fork", "frying pan"];
 const breakingBad = ["Walter White", "Skyler White", "Jesse Pinkman", "Gustavo Fring", "Hank Schrader"];
@@ -109,7 +114,12 @@ const objectNoFoodSingular = [...objectNoFoodNoPlural, ...objectNoFoodNoPlural];
 const objectNoPlural = [...foodNoPlural, ...objectNoFoodNoPlural];
 const objectPlural = [...foodPlural, ...objectNoFoodPlural];
 const object = [...objectPlural, ...objectNoPlural];
-const realHuman = [...drawfeeHost, ...celeb]
+const adjectiveGood = [...adjectiveGreat];
+const adjectiveBad = [...adjectiveTerrible];
+const adjectiveExtreme = [...adjectiveGood, ...adjectiveBad];
+const adjectiveMild = [];
+const adjective = [...adjectiveExtreme, ...adjectiveMild];
+const realHuman = [...drawfeeHost, ...celeb];
 const human = [...realHuman, ...humanCharacter];
 const character = [...humanCharacter, ...nonHumanCharacter];
 const sapient = [...human, ...character];
@@ -135,6 +145,13 @@ const entries = {
     object: object,
     objectA: objectA,
     objects: objects,
+    adjective: adjective,
+    adjectiveExtreme: adjectiveExtreme,
+    adjectiveMild: adjectiveMild,
+    adjectiveGreat: adjectiveGreat,
+    adjectiveTerrible: adjectiveTerrible,
+    adjectiveBad: adjectiveBad,
+    adjectiveGood: adjectiveGood,
     disney: disney,
     animeCharacter: animeCharacter,
     fruit: fruit,
