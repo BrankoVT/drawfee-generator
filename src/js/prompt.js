@@ -223,19 +223,16 @@ function pluralise(word) {
     const vowels = ['a', 'e', 'i', 'o', 'u'];
     const lastLetter = word[word.length - 1];
     const secondToLastLetter = word[word.length - 2];
-
-    if (vowels.includes(secondToLastLetter.toLowerCase())) {
-        if (lastLetter.toLowerCase() === 'y' && !vowels.includes(secondToLastLetter.toLowerCase())) {
-            return word.substring(0, word.length - 1) + 'ies'; // Swap "y" to "ies"
-        } else if (lastLetter.toLowerCase() === 's') {
-            return word + 'es'; // Word already ends in "s", no change needed
-        } else {
-            return word + 's'; // Add an "s" to the word
-        }
+    console.log(vowels.includes(secondToLastLetter.toLowerCase()))
+    if (lastLetter.toLowerCase() === 'y' && !vowels.includes(secondToLastLetter.toLowerCase())) {
+        return word.substring(0, word.length - 1) + 'ies'; // Swap "y" to "ies"
+    } else if (lastLetter.toLowerCase() === 's') {
+        return word + 'es'; // Word already ends in "s", no change needed
     } else {
         return word + 's'; // Add an "s" to the word
     }
 }
+
 
 function addBeing(word) {
     return "being " + word;
@@ -259,7 +256,6 @@ function countPrompts() {
     return prompts.length;
 }
 
-console.log(countPrompts() + " prompts available")
-
+console.log(countPrompts() + " prompts available");
 
 displayPrompt();
