@@ -32,7 +32,7 @@ const prompts = [
 ];
 
 // Entries
-const aceAttorney = ["Phoenix Wright", "Apollo Justice", "Miles Edgeworth", "Manfred von Karma", "Winston Payne", "Franziska von Karma", "Larry Butz", "Maya Fey"]
+const aceAttorney = ["Phoenix Wright", "Apollo Justice", "Miles Edgeworth", "Manfred von Karma", "Winston Payne", "Franziska von Karma", "Larry Butz", "Maya Fey"];
 const activity = ["fighting", "doing the macarena", "dancing", "singing", "running", "crying", "jamming", "stealing stuff", "sleeping", "dying", "kissing", "hugging", "cuddling"];
 const adjectiveGreat = ["great", "graceful", "sacred", "worthy", "holy", "pure", "perfect", "master", "heavenly", "golden", "silver"];
 const adjectiveNegative = ["bad", "sweaty", "disappointing", "unworthy", "ugly", "mean", "unpleasant", "obnoxious", "annoying", "stinky", "dumb", "idiotic", "underwhelming", "overwhelming"];
@@ -60,9 +60,9 @@ const fruit = ["dragon fruit", "blackberry", "raspberry", "pomegranate", "cherry
 const furniture = ["closet", "fridge", "freezer", "oven", "microwave", "furnace", "sink", "fireplace", "dishwasher", "cupboard", "sofa", "night stand", "bed", "love seat", "desk", "chair", "bookcase", "barbeque"];
 const extinctAnimal = ["mammoth", "dodo", "saber-tooth tiger", ...dinosaur];
 const kaiju = ["Godzilla", "King Kong", "Mothra"];
-const macguffin = ["the Ring (Lord of the Rings)", "the One Piece", "the Dragon Balls", "the Triforce"]
+const macguffin = ["the Ring (Lord of the Rings)", "the One Piece", "the Dragon Balls", "the Triforce"];
 const mario = ["Mario", "Luigi", "Toad", "Waluigi", "Wario", "Bowser", "Princess Peach", "Princess Daisy", "Princess Rosalina"];
-const marioAnimal = ["Boo (Mario)", "Koopa", "Donkey Kong", "Diddy Kong", "Yoshi (Mario)"]
+const marioAnimal = ["Boo (Mario)", "Koopa", "Donkey Kong", "Diddy Kong", "Yoshi (Mario)"];
 const meal = ["egg", "hot dog", "Slim Jim", "bagel", "sandwich", "pancake"];
 const mealNoPlural = ["spaghetti", "lasagne", "bread", "pizza", "beef", "pork", "fries/chips", "fish 'n' chips"];
 const mickeyMouse = ["Mickey Mouse", "Minnie Mouse", "Daisy Duck", "Pete (Mickey Mouse)", "Max Goof", "Donald Duck", "Goofy"];
@@ -74,16 +74,16 @@ const significantOther = ["wife", "husband", "spouse", "boyfriend", "girlfriend"
 const simpsons = ["Bart Simpson", "Lisa Simpson", "Homer Simpson", "Marge Simpson", "Maggie Simpson", "Krusty the Clown", "Milhouse"]
 const sonic = ["Sonic", "Tails", "Shadow the Hedgehog", "Silver the Hedgehog", "Jet the Hawk", "Charmy Bee", "Big the Cat", "Blaze the Cat", "Espio the Chameleon", "Amy Rose", "Knuckles the Echidna", "Cream the Rabbit", "Vector the Alligator"];
 const spongebob = ["Spongebob Squarepants", "Squidward Tentacles", "Patrick Star", "Pearl Krabs", "K.A.R.E.N. (Spongebob)", "Mrs Puff (Spongebob)", "Larry the Lobster", "Sandy Cheeks", "Plankton (Spongebob)", "Gary (Spongebob)", "Squilliam Fancyson", "Eugene Krabs"];
-const starTrek = ["Spock", "Captain Kirk (Star Trek)", "Picard (Star Trek)"]
+const starTrek = ["Spock", "Captain Kirk (Star Trek)", "Picard (Star Trek)"];
 const superHero = ["Deadpool", "Ant Man", "Robin (Batman)", "Bat Girl", "Spider-Man", "Iron Man", "Mr Incredible", "Elastigirl", "Frozone", "Captain America", "Batman", "Wonder Woman", "Superman", "Black Widow"];
 const superVillain = ["the Joker", "Thanos", "Mysterio", "the Riddler", "Two-Face", "Harley Quinn", "Poison Ivy", "the Penguin (Batman)", "Mr Freeze"]
 const sweet = ["Mars bar", "ice cream"];
 const sweetNoPlural = ["chocolate", "candy", "chips/crisps"];
 const transport = ["airplane", "car", "bike", "motorbike", "boat", "container ship", "train", "subway", "helicopter", "truck", "scooter", "bus", "yacht", "hovercraft", "ferry", "rocket", "zeppelin", "hot air balloon", "gondola", "tram"];
 const vegetable = ["potato", "sugar beet", "beet", "onion", "cucumber", "pickle", "egg plant", "carrot"];
-const vegetableNoPlural = ["lettuce", "broccoli", "cauliflower", "spinach", "peas", "garlic"]
-const weapon = ["gun", "sword", "katana", "shotgun", "revolver", "pistol", "cannon", "rifle", "trident", "spear", "bow"]
-const weaponNoPlural = ["sulphuric acid", "formic acid", "poison", "venom"]
+const vegetableNoPlural = ["lettuce", "broccoli", "cauliflower", "spinach", "peas", "garlic"];
+const weapon = ["gun", "sword", "katana", "shotgun", "revolver", "pistol", "cannon", "rifle", "trident", "spear", "bow"];
+const weaponNoPlural = ["sulphuric acid", "formic acid", "poison", "venom"];
 const winnieThePoo = ["Winnie the Poo", "Ior (Winnie the Poo)", "Tigger", "Piglet (Winnie the Poo)"];
 const zelda = ["Ganondorf", "Link", "Zelda", "Tingle"];
 
