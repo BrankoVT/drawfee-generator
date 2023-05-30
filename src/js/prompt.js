@@ -160,6 +160,7 @@ const entries = {
     objectNoFoodSingular: objectNoFoodSingular,
     objectNoFoodSingularA: objectNoFoodSingularA,
     object: object,
+    fashion: fashion,
     objectA: objectA,
     objects: objects,
     adjective: adjective,
