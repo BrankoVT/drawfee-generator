@@ -108,6 +108,7 @@ body#promptPage, body.index {
       line-height: 0;
       font-weight: inherit;
       background-color: #fff;
+      outline: none;
 
       &:active, &:focus {
         background-color: #fff;
@@ -118,7 +119,7 @@ body#promptPage, body.index {
         transform: rotate(-5deg);
       }
 
-      &:active p, &:focus p {
+      &:active p {
         transform: rotate(10deg);
         transition: transform;
       }
