@@ -45,7 +45,7 @@ body#promptPage, body.index {
         }
 
         &.active {
-          background-color: #fff;
+          background-color: inherit;
           color: #000;
         }
       }
@@ -109,11 +109,16 @@ body#promptPage, body.index {
       font-weight: inherit;
       background-color: #fff;
 
+      &:active, &:focus {
+        background-color: #fff;
+        outline: none;
+      }
+
       &:hover p {
         transform: rotate(-5deg);
       }
 
-      &:active p {
+      &:active p, &:focus p {
         transform: rotate(10deg);
         transition: transform;
       }
