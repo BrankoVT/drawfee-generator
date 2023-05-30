@@ -28,7 +28,9 @@ const prompts = [
     "finally, %sapient% is announced for Smash!",
     "%sapient% has finally found the %adjectiveGreat% %object%",
     "%sapient% thought they found the %adjectiveGreat% %object%, but it was actually %adjectiveTerrible%",
-    "the battle was decided long ago, when %sapient% got their hands on the %adjectiveExtreme% %object%"
+    "the battle was decided long ago, when %sapient% got their hands on the %adjectiveExtreme% %object%",
+    "%sapient% wearing %fashion% clothing",
+    "%sapient% with a %fashion% %clothes%"
 ];
 
 // Entries
@@ -55,6 +57,7 @@ const drawfeeNonHumanCharacter = ["Todd from Mario", "Jacob horse", "Burgoo King
 const drawfeeFictionalAnimal = ["Pissboy", "Todd from Mario"];
 const drawfeeHost = ["Nathan", "Jacob", "Karina", "Julia", "David"];
 const drawtectives = ["Grandan Highforge", "York Rogdul", "Rosé (Drawtectives)", "Jancy True", "Eugene Finch", "Don Jovi", "Kingston Munch", "Villainius", "Harper Justice", "Ogalvy Smythe", "Lotta Justice", "Sorin Justice", "Emery Justice", "Harvey Hornswoggle"]
+const fashion = ["goth", "queer", "bad", "wild west", "swimwear", "vintage", "antique", "superhero", "summer", "skater", "surfer", "winter", "villainous", "rock", "sexy", "streetwear", "sportswear", "nerdy", "nighttime", "grunge", "Roman", "minimalist", "modern", "military", "kawaii", "maternal", "Spartan", "operatic", "casual", "vintage", "flamboyant", "hippie", "tomboy", "punk", "biker", "dieselpunks", "solarpunk", "cyberpunk", "steampunk", "business-casual", "professional", "femme", "butch", "drag queen", "80s", "monochrome", "colourful", "pompous", "90s", "2000s", "1930s", "1920s", "70s", "Victorian", "Elizabethan"]
 const familyGuy = ["Peter Griffin", "Lois Griffin", "Meg Griffin", "Chris Griffin"];
 const fruit = ["dragon fruit", "blackberry", "raspberry", "pomegranate", "cherry", "pineapple", "blueberry", "strawberry", "mango", "kiwi", "plum", "tomato", "apple", "pear", "banana", "orange", "grape", "melon"];
 const furniture = ["closet", "fridge", "freezer", "oven", "microwave", "furnace", "sink", "fireplace", "dishwasher", "cupboard", "sofa", "night stand", "bed", "love seat", "desk", "chair", "bookcase", "barbeque"];
@@ -116,6 +119,7 @@ const ownedPlace = [...room];
 const publicPlace = [];
 const place = [...ownedPlace, ...publicPlace];
 const housePart = [...furniture, ...appliances];
+const clothes = [...clothing, ...clothingNoPlural]
 const animalAndCharacter = [...animal, ...nonHumanCharacter];
 const objectNoFoodPlural = [...transport, ...housePart, ...clothing, ...weapon];
 const objectNoFoodNoPlural = [...clothingNoPlural, ...macguffin, ...weaponNoPlural];
@@ -140,6 +144,7 @@ const foodA = [...foodNoPlural, ...foodPlural.map(addA)];
 const objectNoFoodSingularA = [...objectNoFoodPlural.map(addA), ...objectNoFoodNoPlural];
 const verb = [...activity, ...adjective.map(addBeing)];
 
+
 // Define the entries
 const entries = {
     drawfeeHost: drawfeeHost,
@@ -151,6 +156,7 @@ const entries = {
     verb: verb,
     dinosaur: dinosaur,
     pokemon: pokemon,
+    clothes: clothes,
     objectNoFoodSingular: objectNoFoodSingular,
     objectNoFoodSingularA: objectNoFoodSingularA,
     object: object,
