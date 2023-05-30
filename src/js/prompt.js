@@ -34,8 +34,8 @@ const prompts = [
 // Entries
 const aceAttorney = ["Phoenix Wright", "Apollo Justice", "Miles Edgeworth", "Manfred von Karma", "Winston Payne", "Franziska von Karma", "Larry Butz", "Maya Fey"]
 const activity = ["fighting", "doing the macarena", "dancing", "singing", "running", "crying", "jamming", "stealing stuff", "sleeping", "dying", "kissing", "hugging", "cuddling"];
-const adjectiveGreat = ["great", "graceful", "sacred", "unworthy", "holy", "pure", "perfect", "master", "heavenly", "golden", "silver"];
-const adjectiveNegative = ["bad", "sweaty", "disappointing", "ugly", "mean", "unpleasant", "obnoxious", "annoying", "stinky", "dumb", "idiotic", "underwhelming", "overwhelming"];
+const adjectiveGreat = ["great", "graceful", "sacred", "worthy", "holy", "pure", "perfect", "master", "heavenly", "golden", "silver"];
+const adjectiveNegative = ["bad", "sweaty", "disappointing", "unworthy", "ugly", "mean", "unpleasant", "obnoxious", "annoying", "stinky", "dumb", "idiotic", "underwhelming", "overwhelming"];
 const adjectivePositive = ["good", "cute", "nice", "funny", "pleasant", "beautiful", "pretty", "handsome"];
 const adjectiveTerrible = ["terrible", "rancid", "irredeemable", "unforgivable", "sinful", "dire", "disgraceful", "horrible", "unholy", "cursed", "devilish", "satanic", "hellish", "rotten", "infernal"];
 const animalCrossing = ["Tom Nook", "Timmy Nook", "Tommy Nook", "Raymond (Animal Crossing)", "Ankha (Animal Crossing)"];
