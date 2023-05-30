@@ -112,7 +112,7 @@ body#promptPage, body.index {
 
       &:active, &:focus {
         background-color: #fff;
-        outline: none;
+        outline: none; !important;
       }
 
       &:hover p {
