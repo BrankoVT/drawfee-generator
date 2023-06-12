@@ -60,7 +60,7 @@ const drawfeeNonHumanCharacter = ["Todd from Mario", "Jacob horse", "Burgoo King
 const drawfeeFictionalAnimal = ["Pissboy", "Todd from Mario"];
 const drawfeeHost = ["Nathan", "Jacob", "Karina", "Julia", "David"];
 const drawtectives = ["Grandan Highforge", "York Rogdul", "Rosé (Drawtectives)", "Jancy True", "Eugene Finch", "Don Jovi", "Kingston Munch", "Villainius", "Harper Justice", "Ogalvy Smythe", "Lotta Justice", "Sorin Justice", "Emery Justice", "Harvey Hornswoggle"]
-const entertainmentPlace = ["theme park", "park", "port", "library", "arcade", "circus", "carnival", "Renaissance fair"];
+const entertainmentPlace = ["theme park", "zoo", "aviary", "botanical garden", "park", "port", "library", "arcade", "circus", "carnival", "Renaissance fair"];
 const fashion = ["goth", "queer", "bad", "Renaissance", "wild west", "swimwear", "vintage", "antique", "superhero", "summer", "skater", "surfer", "winter", "villainous", "rock", "sexy", "streetwear", "sportswear", "nerdy", "nighttime", "grunge", "Roman", "minimalist", "modern", "military", "kawaii", "maternal", "Spartan", "operatic", "casual", "vintage", "flamboyant", "hippie", "tomboy", "punk", "biker", "dieselpunks", "solarpunk", "cyberpunk", "steampunk", "business-casual", "professional", "femme", "butch", "drag queen", "80s", "monochrome", "colourful", "pompous", "90s", "2000s", "1930s", "1920s", "70s", "Victorian", "Elizabethan"]
 const familyGuy = ["Peter Griffin", "Lois Griffin", "Meg Griffin", "Chris Griffin"];
 const fruit = ["dragon fruit", "blackberry", "raspberry", "pomegranate", "cherry", "pineapple", "blueberry", "strawberry", "mango", "kiwi", "plum", "tomato", "apple", "pear", "banana", "orange", "grape", "melon"];
@@ -80,7 +80,7 @@ const naturalFeature = ["tree", "volcano", "stream", "crater", "mud pool", "land
 const pokemon = ["Spheal (Pokémon)", "Bulbasaur", "Pikachu", "Blastoise", "Swampert", "Mr Mime", "Sprigatito", "Eevee", "Charizard", "Venusaur", "Snorlax"];
 const room = ["garden", "nursery", "bathroom", "garage", "yard", "basement", "attic", "office", "toy room", "bedroom", "kitchen", "living room", "gym", "observatory", "lavatory"];
 const significantOther = ["wife", "husband", "spouse", "boyfriend", "girlfriend", "partner"];
-const simpsons = ["Bart Simpson", "Lisa Simpson", "Homer Simpson", "Marge Simpson", "Maggie Simpson", "Krusty the Clown", "Milhouse"]
+const simpsons = ["Bart Simpson", "Lisa Simpson", "Homer Simpson", "Marge Simpson", "Maggie Simpson", "Krusty the Clown", "Milhouse", "Mr Burns", "Ned Flanders"];
 const sonic = ["Sonic", "Tails", "Shadow the Hedgehog", "Silver the Hedgehog", "Jet the Hawk", "Charmy Bee", "Big the Cat", "Blaze the Cat", "Espio the Chameleon", "Amy Rose", "Knuckles the Echidna", "Cream the Rabbit", "Vector the Alligator"];
 const spongebob = ["Spongebob Squarepants", "Squidward Tentacles", "Patrick Star", "Pearl Krabs", "K.A.R.E.N. (Spongebob)", "Mrs Puff (Spongebob)", "Larry the Lobster", "Sandy Cheeks", "Plankton (Spongebob)", "Gary (Spongebob)", "Squilliam Fancyson", "Eugene Krabs"];
 const starTrek = ["Spock", "Captain Kirk (Star Trek)", "Picard (Star Trek)"];
@@ -90,6 +90,7 @@ const superVillain = ["the Joker", "Thanos", "Mysterio", "the Riddler", "Two-Fac
 const sweet = ["Mars bar", "ice cream"];
 const sweetNoPlural = ["chocolate", "candy", "chips/crisps"];
 const transport = ["airplane", "car", "bike", "motorbike", "boat", "container ship", "train", "subway", "helicopter", "truck", "scooter", "bus", "yacht", "hovercraft", "ferry", "rocket", "zeppelin", "hot air balloon", "gondola", "tram"];
+const urbanFeature = ["house", "windmill", "village", "city", "mosque", "cathedral", "church", "nature reserve", "factory", "hotel", "b&b", "pub", "bar", "restaurant", "pool", "apartment", "tent", "shed", "cottage"];
 const vegetable = ["potato", "sugar beet", "beet", "onion", "cucumber", "pickle", "egg plant", "carrot"];
 const vegetableNoPlural = ["lettuce", "broccoli", "cauliflower", "spinach", "peas", "garlic"];
 const weapon = ["gun", "sword", "katana", "shotgun", "revolver", "pistol", "cannon", "rifle", "trident", "spear", "bow"];
@@ -143,7 +144,7 @@ const sapient = [...human, ...character];
 
 
 const ownedPlace = [...room.map(addA)];
-const publicPlace = [...serviceBuilding.map(addA), ...entertainmentPlace.map(addA), ...biome.map(addA)];
+const publicPlace = [...urbanFeature.map(addA), ...naturalFeature.map(addA), ...serviceBuilding.map(addA), ...entertainmentPlace.map(addA), ...biome.map(addA)];
 const place = [...ownedPlace, ...publicPlace];
 
 const characters = [...character.map(pluralise), ...groupOfCharacters];
