@@ -31,18 +31,20 @@ const prompts = [
     "the battle was decided long ago, when %sapient% got their hands on the %adjectiveExtreme% %object%",
     "%sapient% wearing %fashion% clothing",
     "%sapient% with a %fashion% %clothes%",
-    "%sapient% and %sapient% are chilling in %place%"
+    "%sapient% and %sapient% are chilling in %place%",
+    "%sapient% is %action% in %place%"
 ];
 
 // Entries
 const aceAttorney = ["Phoenix Wright", "Apollo Justice", "Miles Edgeworth", "Manfred von Karma", "Winston Payne", "Franziska von Karma", "Larry Butz", "Maya Fey"];
-const activity = ["fighting", "doing the macarena", "dancing", "singing", "running", "crying", "jamming", "stealing stuff", "sleeping", "dying", "kissing", "hugging", "cuddling"];
+const activity = ["fighting", "chilling", "resting", "doing the macarena", "dancing", "singing", "running", "crying", "jamming", "stealing stuff", "sleeping", "dying", "kissing", "hugging", "cuddling"];
 const adjectiveGreat = ["great", "graceful", "sacred", "worthy", "holy", "pure", "perfect", "master", "heavenly", "golden", "silver"];
 const adjectiveNegative = ["bad", "sweaty", "disappointing", "unworthy", "ugly", "mean", "unpleasant", "obnoxious", "annoying", "stinky", "dumb", "idiotic", "underwhelming", "overwhelming"];
 const adjectivePositive = ["good", "cute", "nice", "funny", "pleasant", "beautiful", "pretty", "handsome"];
 const adjectiveTerrible = ["terrible", "rancid", "irredeemable", "unforgivable", "sinful", "dire", "disgraceful", "horrible", "unholy", "cursed", "devilish", "satanic", "hellish", "rotten", "infernal"];
 const animalCrossing = ["Tom Nook", "Timmy Nook", "Tommy Nook", "Raymond (Animal Crossing)", "Ankha (Animal Crossing)"];
 const appliances = ["air fryer", "phone", "flip phone", "floppy disc", "landline", "kitchen robot", "mixer", "blender", "book", "laptop", "computer", "TV", "spork", "spoon", "knife", "fork", "frying pan"];
+const biome = ["forest", "desert", "bog", "lake", "beach", "river", "ocean", "meadow", "savannah"];
 const breakingBad = ["Walter White", "Skyler White", "Jesse Pinkman", "Gustavo Fring", "Hank Schrader"];
 const celeb = ["Keanu Reeves", "Markiplier", "Satan", "God", "the Pope", "Mr Beast", "Rowan Atkinson", "Gandhi", "Daniel Radcliffe", "Emma Watson", "Johnny Depp", "Sean Connery", "Angelina Jolie", "Jason Momoa", "Jim Carrey", "Orlando Bloom", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "the Rock", "John Cena", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
 const chainsawMan = ["Makima", "Power (Chainsaw Man)", "Denji (Chainsaw Man)"];
@@ -58,7 +60,7 @@ const drawfeeNonHumanCharacter = ["Todd from Mario", "Jacob horse", "Burgoo King
 const drawfeeFictionalAnimal = ["Pissboy", "Todd from Mario"];
 const drawfeeHost = ["Nathan", "Jacob", "Karina", "Julia", "David"];
 const drawtectives = ["Grandan Highforge", "York Rogdul", "Rosé (Drawtectives)", "Jancy True", "Eugene Finch", "Don Jovi", "Kingston Munch", "Villainius", "Harper Justice", "Ogalvy Smythe", "Lotta Justice", "Sorin Justice", "Emery Justice", "Harvey Hornswoggle"]
-const entertainmentPlace = ["theme park", "park", "port", "circus", "carnival", "Renaissance fair"];
+const entertainmentPlace = ["theme park", "park", "port", "library", "arcade", "circus", "carnival", "Renaissance fair"];
 const fashion = ["goth", "queer", "bad", "Renaissance", "wild west", "swimwear", "vintage", "antique", "superhero", "summer", "skater", "surfer", "winter", "villainous", "rock", "sexy", "streetwear", "sportswear", "nerdy", "nighttime", "grunge", "Roman", "minimalist", "modern", "military", "kawaii", "maternal", "Spartan", "operatic", "casual", "vintage", "flamboyant", "hippie", "tomboy", "punk", "biker", "dieselpunks", "solarpunk", "cyberpunk", "steampunk", "business-casual", "professional", "femme", "butch", "drag queen", "80s", "monochrome", "colourful", "pompous", "90s", "2000s", "1930s", "1920s", "70s", "Victorian", "Elizabethan"]
 const familyGuy = ["Peter Griffin", "Lois Griffin", "Meg Griffin", "Chris Griffin"];
 const fruit = ["dragon fruit", "blackberry", "raspberry", "pomegranate", "cherry", "pineapple", "blueberry", "strawberry", "mango", "kiwi", "plum", "tomato", "apple", "pear", "banana", "orange", "grape", "melon"];
@@ -140,7 +142,7 @@ const sapient = [...human, ...character];
 
 
 const ownedPlace = [...room.map(addA)];
-const publicPlace = [...serviceBuilding.map(addA)];
+const publicPlace = [...serviceBuilding.map(addA), ...entertainmentPlace.map(addA), ...biome.map(addA)];
 const place = [...ownedPlace, ...publicPlace];
 
 const characters = [...character.map(pluralise), ...groupOfCharacters];
