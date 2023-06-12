@@ -76,6 +76,7 @@ const mealNoPlural = ["spaghetti", "lasagne", "bread", "pizza", "beef", "pork", 
 const mickeyMouse = ["Mickey Mouse", "Minnie Mouse", "Daisy Duck", "Pete (Mickey Mouse)", "Max Goof", "Donald Duck", "Goofy"];
 const muppet = ["Elmo", "Rizzo the Rat", "Cookie Monster", "Fozzie Bear", "Gonzo", "Beaker (Muppets)", "Big Bird (Sesame Street)", "Kermit the Frog", "Miss Piggy", "Animal (Muppets)", "Bert (Sesame Street)", "Ernie (Sesame Street)"]
 const mythicalAnimal = ["dragon", "hydra", "minotaur", "chimera", "unicorn", "pegasus", "griffin", "hippogriff", "phoenix", "kraken"];
+const naturalFeature = ["tree", "volcano", "stream", "crater", "mud pool", "landslide", "cave", "pit", "tornado", "storm"]
 const pokemon = ["Spheal (Pokémon)", "Bulbasaur", "Pikachu", "Blastoise", "Swampert", "Mr Mime", "Sprigatito", "Eevee", "Charizard", "Venusaur", "Snorlax"];
 const room = ["garden", "nursery", "bathroom", "garage", "yard", "basement", "attic", "office", "toy room", "bedroom", "kitchen", "living room", "gym", "observatory", "lavatory"];
 const significantOther = ["wife", "husband", "spouse", "boyfriend", "girlfriend", "partner"];
