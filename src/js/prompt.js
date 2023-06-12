@@ -30,7 +30,8 @@ const prompts = [
     "%sapient% thought they found the %adjectiveGreat% %object%, but it was actually %adjectiveTerrible%",
     "the battle was decided long ago, when %sapient% got their hands on the %adjectiveExtreme% %object%",
     "%sapient% wearing %fashion% clothing",
-    "%sapient% with a %fashion% %clothes%"
+    "%sapient% with a %fashion% %clothes%",
+    "%sapient% and %sapient% are chilling in %place%"
 ];
 
 // Entries
@@ -43,7 +44,7 @@ const adjectiveTerrible = ["terrible", "rancid", "irredeemable", "unforgivable",
 const animalCrossing = ["Tom Nook", "Timmy Nook", "Tommy Nook", "Raymond (Animal Crossing)", "Ankha (Animal Crossing)"];
 const appliances = ["air fryer", "phone", "flip phone", "floppy disc", "landline", "kitchen robot", "mixer", "blender", "book", "laptop", "computer", "TV", "spork", "spoon", "knife", "fork", "frying pan"];
 const breakingBad = ["Walter White", "Skyler White", "Jesse Pinkman", "Gustavo Fring", "Hank Schrader"];
-const celeb = ["Keanu Reeves", "Mr Beast", "Rowan Atkinson", "Gandhi", "Daniel Radcliffe", "Emma Watson", "Johnny Depp", "Sean Connery", "Angelina Jolie", "Jason Momoa", "Jim Carrey", "Orlando Bloom", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "the Rock", "John Cena", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
+const celeb = ["Keanu Reeves", "Markiplier", "Satan", "God", "the Pope", "Mr Beast", "Rowan Atkinson", "Gandhi", "Daniel Radcliffe", "Emma Watson", "Johnny Depp", "Sean Connery", "Angelina Jolie", "Jason Momoa", "Jim Carrey", "Orlando Bloom", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "the Rock", "John Cena", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
 const chainsawMan = ["Makima", "Power (Chainsaw Man)", "Denji (Chainsaw Man)"];
 const clothing = ["skirt", "jacket", "belt", "cap", "hat", "coat", "glove", "waistcoat", "boot", "bikini", "shoe", "tophat", "pantaloon", "ring", "speedo", "bracelet", "hoodie", "sweater", "bowtie", "tie", "T-shirt", "shirt", "dress", "poncho"];
 const clothingNoPlural = ["pants", "trousers", "swimming trunks", "high heels", "pajamas", "shorts", "glasses", "boxer shorts", "knickers", "thigh highs"];
@@ -61,6 +62,7 @@ const fashion = ["goth", "queer", "bad", "wild west", "swimwear", "vintage", "an
 const familyGuy = ["Peter Griffin", "Lois Griffin", "Meg Griffin", "Chris Griffin"];
 const fruit = ["dragon fruit", "blackberry", "raspberry", "pomegranate", "cherry", "pineapple", "blueberry", "strawberry", "mango", "kiwi", "plum", "tomato", "apple", "pear", "banana", "orange", "grape", "melon"];
 const furniture = ["closet", "fridge", "freezer", "oven", "microwave", "furnace", "sink", "fireplace", "dishwasher", "cupboard", "sofa", "night stand", "bed", "love seat", "desk", "chair", "bookcase", "barbeque"];
+const groupOfCharacters = ["room full of vampires", "the Teletubbies"];
 const extinctAnimal = ["mammoth", "dodo", "saber-tooth tiger", ...dinosaur];
 const kaiju = ["Godzilla", "King Kong", "Mothra"];
 const macguffin = ["the Ring (Lord of the Rings)", "the One Piece", "the Dragon Balls", "the Triforce"];
@@ -78,6 +80,7 @@ const simpsons = ["Bart Simpson", "Lisa Simpson", "Homer Simpson", "Marge Simpso
 const sonic = ["Sonic", "Tails", "Shadow the Hedgehog", "Silver the Hedgehog", "Jet the Hawk", "Charmy Bee", "Big the Cat", "Blaze the Cat", "Espio the Chameleon", "Amy Rose", "Knuckles the Echidna", "Cream the Rabbit", "Vector the Alligator"];
 const spongebob = ["Spongebob Squarepants", "Squidward Tentacles", "Patrick Star", "Pearl Krabs", "K.A.R.E.N. (Spongebob)", "Mrs Puff (Spongebob)", "Larry the Lobster", "Sandy Cheeks", "Plankton (Spongebob)", "Gary (Spongebob)", "Squilliam Fancyson", "Eugene Krabs"];
 const starTrek = ["Spock", "Captain Kirk (Star Trek)", "Picard (Star Trek)"];
+const serviceBuilding = ["police headquarters", "airport", "train station", "tram station", "bus station", "elder home", "kindergarten", "university", "private school", "school", "high school", "elementary school", "prison", "hospital", "fire department", "doctor's office"];
 const superHero = ["Deadpool", "Ant Man", "Robin (Batman)", "Bat Girl", "Spider-Man", "Iron Man", "Mr Incredible", "Elastigirl", "Frozone", "Captain America", "Batman", "Wonder Woman", "Superman", "Black Widow"];
 const superVillain = ["the Joker", "Thanos", "Mysterio", "the Riddler", "Two-Face", "Harley Quinn", "Poison Ivy", "the Penguin (Batman)", "Mr Freeze"]
 const sweet = ["Mars bar", "ice cream"];
@@ -92,7 +95,7 @@ const zelda = ["Ganondorf", "Link", "Zelda", "Tingle"];
 
 const animal = ["lion", "barracuda", "ox", "badger", "moose", "slug", "parrot", "kiwi (animal)", "snail", "horseshoe crab", "puffin", "cobra", "rattle snake", "owl", "bumblebee", "wasp", "bee", "mosquito", "daddy long-legs", "dog", "shrimp", "panther", "salamander", "chihuahua", "bat", "goldfish", "pufferfish", "frog", "alpaca", "beagle", "German shepherd", "pitbull", "duck", "swan", "goose", "bison", "llama", "mule", "donkey", "horse", "naked mole rat", "jaguar", "ladybug", "whale", "walrus", "seal", "blob fish", "coral", "chimp", "polar bear", "kangaroo", "spider", "butterfly", "ostrich", "emu", "cat", "fish", "jellyfish", "crab", "pigeon", "ape", "iguana", "lizard", "tortoise", "bird", "eagle", "hawk", "squid", "octopus", "sea star", "ferret", "mouse", "rat", "opossum", "cow", "sheep", "pig", "turtle", "shark", "tiger", "elephant", "giraffe", "zebra", "bear", "monkey", "penguin", "dolphin", "koala", "panda", "hippopotamus", "wolf", "deer", "rabbit", "fox", "cheetah", "rhinoceros", "gorilla", "squirrel", ...extinctAnimal, ...mythicalAnimal];
 
-const miscHuman = ["Jon Arbuckle", "Beelzebub", "the Onceler", "Satan", "God", "Dr Eggman", "James Bond", "Mr Bean", "Santa Claus", "Captain Jack Sparrow", "the Doctor (Doctor Who)", "Charlie Brown", "Christopher Robin", "Popeye the Sailor Man"];
+const miscHuman = ["Jon Arbuckle", "Beelzebub", "the Onceler", "Dr Eggman", "James Bond", "Mr Bean", "Santa Claus", "Captain Jack Sparrow", "the Doctor (Doctor Who)", "Charlie Brown", "Christopher Robin", "Popeye the Sailor Man"];
 const miscNonHuman = ["Garfield", "Ponygon", "the Grinch", "the Lorax", "Odie (Garfield)", "Nermal (Garfield)", "Snoopy", "Brian Griffin"];
 const miscAnime = ["One-Punch Man", "Light Yagami", "Naruto Uzumaki", "Sasuke Uchiha"];
 const miscAnimeNonHuman = ["Ryuk", "Pochita"];
@@ -115,9 +118,6 @@ const nonHumanCharacter = [...sonic, ...digimon, ...muppet, ...drawfeeNonHumanCh
 const foodNoPlural = [...sweetNoPlural, ...mealNoPlural, ...vegetableNoPlural];
 const foodPlural = [...fruit, ...sweet, ...meal, ...vegetable];
 const food = [...foodPlural, ...foodNoPlural];
-const ownedPlace = [...room];
-const publicPlace = [];
-const place = [...ownedPlace, ...publicPlace];
 const housePart = [...furniture, ...appliances];
 const clothes = [...clothing, ...clothingNoPlural]
 const animalAndCharacter = [...animal, ...nonHumanCharacter];
@@ -137,6 +137,13 @@ const human = [...realHuman, ...humanCharacter];
 const character = [...humanCharacter, ...nonHumanCharacter];
 const sapient = [...human, ...character];
 
+
+const ownedPlace = [...room.map(addA)];
+const publicPlace = [...serviceBuilding.map(addA)];
+const place = [...ownedPlace, ...publicPlace];
+
+const characters = [...character.map(pluralise), ...groupOfCharacters];
+const sapients = [...sapient.map(pluralise), ...groupOfCharacters]
 const objects = [...objectPlural.map(pluralise), ...objectNoPlural];
 const objectA = [...object.map(addA)];
 const objectNoFood = [...objectNoFoodPlural.map(pluralise), ...objectNoFoodNoPlural];
