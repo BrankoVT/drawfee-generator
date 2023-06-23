@@ -32,21 +32,23 @@ const prompts = [
     "%sapient% wearing %fashion% clothing",
     "%sapient% with a %fashion% %clothes%",
     "%sapient% and %sapient% are chilling in %place%",
-    "%sapient% is %action% in %place%"
+    "%sapient% is %action% in %place%",
+    "%sapient% sees %objectA% for the first time"
 ];
 
 // Entries
 const aceAttorney = ["Phoenix Wright", "Apollo Justice", "Miles Edgeworth", "Manfred von Karma", "Winston Payne", "Franziska von Karma", "Larry Butz", "Maya Fey"];
 const activity = ["fighting", "chilling", "resting", "doing the macarena", "dancing", "singing", "running", "crying", "jamming", "stealing stuff", "sleeping", "dying", "kissing", "hugging", "cuddling"];
-const adjectiveGreat = ["great", "graceful", "sacred", "worthy", "holy", "pure", "perfect", "master", "heavenly", "golden", "silver"];
-const adjectiveNegative = ["bad", "sweaty", "disappointing", "unworthy", "ugly", "mean", "unpleasant", "obnoxious", "annoying", "stinky", "dumb", "idiotic", "underwhelming", "overwhelming"];
+const adjectiveGreat = ["great", "epic", "graceful", "sacred", "worthy", "holy", "pure", "perfect", "master", "heavenly", "golden", "silver"];
+const adjectiveNegative = ["bad", "cringe", "sweaty", "disappointing", "unworthy", "ugly", "mean", "unpleasant", "obnoxious", "annoying", "stinky", "dumb", "idiotic", "underwhelming", "overwhelming"];
+const adjectiveNeutral = ["new", "long", "short"]
 const adjectivePositive = ["good", "cute", "nice", "funny", "pleasant", "beautiful", "pretty", "handsome"];
 const adjectiveTerrible = ["terrible", "rancid", "irredeemable", "unforgivable", "sinful", "dire", "disgraceful", "horrible", "unholy", "cursed", "devilish", "satanic", "hellish", "rotten", "infernal"];
 const animalCrossing = ["Tom Nook", "Timmy Nook", "Tommy Nook", "Raymond (Animal Crossing)", "Ankha (Animal Crossing)"];
 const appliances = ["air fryer", "phone", "flip phone", "floppy disc", "landline", "kitchen robot", "mixer", "blender", "book", "laptop", "computer", "TV", "spork", "spoon", "knife", "fork", "frying pan"];
 const biome = ["forest", "desert", "bog", "lake", "beach", "river", "ocean", "meadow", "savannah"];
 const breakingBad = ["Walter White", "Skyler White", "Jesse Pinkman", "Gustavo Fring", "Hank Schrader"];
-const celeb = ["Keanu Reeves", "Markiplier", "Satan", "God", "the Pope", "Mr Beast", "Rowan Atkinson", "Gandhi", "Daniel Radcliffe", "Emma Watson", "Johnny Depp", "Sean Connery", "Angelina Jolie", "Jason Momoa", "Jim Carrey", "Orlando Bloom", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "the Rock", "John Cena", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
+const celeb = ["Keanu Reeves", "Jaiden Animations", "Rubber Ross", "Markiplier", "Satan", "God", "the Pope", "Mr Beast", "Rowan Atkinson", "Gandhi", "Daniel Radcliffe", "Emma Watson", "Johnny Depp", "Sean Connery", "Angelina Jolie", "Jason Momoa", "Jim Carrey", "Orlando Bloom", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "the Rock", "John Cena", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
 const chainsawMan = ["Makima", "Power (Chainsaw Man)", "Denji (Chainsaw Man)"];
 const clothing = ["skirt", "jacket", "belt", "cap", "hat", "coat", "glove", "waistcoat", "boot", "bikini", "shoe", "tophat", "pantaloon", "ring", "speedo", "bracelet", "hoodie", "sweater", "bowtie", "tie", "T-shirt", "shirt", "dress", "poncho"];
 const clothingNoPlural = ["pants", "trousers", "swimming trunks", "high heels", "pajamas", "shorts", "glasses", "boxer shorts", "knickers", "thigh highs"];
@@ -81,7 +83,7 @@ const pokemon = ["Spheal (Pokémon)", "Bulbasaur", "Pikachu", "Blastoise", "Swam
 const room = ["garden", "nursery", "bathroom", "garage", "yard", "basement", "attic", "office", "toy room", "bedroom", "kitchen", "living room", "gym", "observatory", "lavatory"];
 const significantOther = ["wife", "husband", "spouse", "boyfriend", "girlfriend", "partner"];
 const simpsons = ["Bart Simpson", "Lisa Simpson", "Homer Simpson", "Marge Simpson", "Maggie Simpson", "Krusty the Clown", "Milhouse", "Mr Burns", "Ned Flanders"];
-const skill = ["boxing", "", "cleaning", "baking", "cooking", "painting", "drawing", "writing", "working out", "playing violin", "playing the sax", "playing the piano", "playing rugby", "playing american football", "playing soccer", "skiing", "tennising", "doing arts and crafts", "playing the guitar"];
+const skill = ["boxing", "cleaning", "baking", "cooking", "painting", "drawing", "writing", "working out", "playing violin", "playing the sax", "playing the piano", "playing rugby", "playing american football", "playing soccer", "skiing", "tennising", "doing arts and crafts", "playing the guitar"];
 const sonic = ["Sonic", "Tails", "Shadow the Hedgehog", "Silver the Hedgehog", "Jet the Hawk", "Charmy Bee", "Big the Cat", "Blaze the Cat", "Espio the Chameleon", "Amy Rose", "Knuckles the Echidna", "Cream the Rabbit", "Vector the Alligator"];
 const spongebob = ["Spongebob Squarepants", "Squidward Tentacles", "Patrick Star", "Pearl Krabs", "K.A.R.E.N. (Spongebob)", "Mrs Puff (Spongebob)", "Larry the Lobster", "Sandy Cheeks", "Plankton (Spongebob)", "Gary (Spongebob)", "Squilliam Fancyson", "Eugene Krabs"];
 const starTrek = ["Spock", "Captain Kirk (Star Trek)", "Picard (Star Trek)"];
@@ -137,7 +139,7 @@ const adjectiveGood = [...adjectiveGreat, ...adjectivePositive];
 const adjectiveBad = [...adjectiveTerrible, ...adjectiveNegative];
 const adjectiveExtreme = [...adjectiveGood, ...adjectiveBad];
 const adjectiveMild = [...adjectiveNegative, ...adjectivePositive];
-const adjective = [...adjectiveExtreme, ...adjectiveMild];
+const adjective = [...adjectiveExtreme, ...adjectiveMild, ...adjectiveNeutral];
 const realHuman = [...drawfeeHost, ...celeb];
 const human = [...realHuman, ...humanCharacter];
 const character = [...humanCharacter, ...nonHumanCharacter];
@@ -155,7 +157,7 @@ const objectA = [...object.map(addA)];
 const objectNoFood = [...objectNoFoodPlural.map(pluralise), ...objectNoFoodNoPlural];
 const foodA = [...foodNoPlural, ...foodPlural.map(addA)];
 const objectNoFoodSingularA = [...objectNoFoodPlural.map(addA), ...objectNoFoodNoPlural];
-const verb = [...activity, ...adjective.map(addBeing)];
+const verb = [...activity, ...skill, ...adjective.map(addBeing)];
 
 
 // Define the entries
