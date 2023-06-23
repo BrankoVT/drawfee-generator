@@ -4,7 +4,7 @@
 /* ====== Data ======= */
 // Prompts
 const prompts = [
-    "%human%'s fursona",
+    "%human%'s animal form",
     "a %nonHuman% gijinka",
     "%character% from memory",
     "the %character% x %character% ship",
@@ -33,7 +33,8 @@ const prompts = [
     "%sapient% with a %fashion% %clothes%",
     "%sapient% and %sapient% are chilling in %place%",
     "%sapient% is %action% in %place%",
-    "%sapient% sees %objectA% for the first time"
+    "%sapient% sees %objectA% for the first time",
+    "%character%, but (extra) %adjective%"
 ];
 
 // Entries
@@ -41,14 +42,14 @@ const aceAttorney = ["Phoenix Wright", "Apollo Justice", "Miles Edgeworth", "Man
 const activity = ["fighting", "chilling", "resting", "doing the macarena", "dancing", "singing", "running", "crying", "jamming", "stealing stuff", "sleeping", "dying", "kissing", "hugging", "cuddling"];
 const adjectiveGreat = ["great", "epic", "graceful", "sacred", "worthy", "holy", "pure", "perfect", "master", "heavenly", "golden", "silver"];
 const adjectiveNegative = ["bad", "cringe", "sweaty", "disappointing", "unworthy", "ugly", "mean", "unpleasant", "obnoxious", "annoying", "stinky", "dumb", "idiotic", "underwhelming", "overwhelming"];
-const adjectiveNeutral = ["new", "long", "short"]
+const adjectiveNeutral = ["new", "long", "short", "hot"]
 const adjectivePositive = ["good", "cute", "nice", "funny", "pleasant", "beautiful", "pretty", "handsome"];
 const adjectiveTerrible = ["terrible", "rancid", "irredeemable", "unforgivable", "sinful", "dire", "disgraceful", "horrible", "unholy", "cursed", "devilish", "satanic", "hellish", "rotten", "infernal"];
 const animalCrossing = ["Tom Nook", "Timmy Nook", "Tommy Nook", "Raymond (Animal Crossing)", "Ankha (Animal Crossing)"];
 const appliances = ["air fryer", "phone", "flip phone", "floppy disc", "landline", "kitchen robot", "mixer", "blender", "book", "laptop", "computer", "TV", "spork", "spoon", "knife", "fork", "frying pan"];
 const biome = ["forest", "desert", "bog", "lake", "beach", "river", "ocean", "meadow", "savannah"];
 const breakingBad = ["Walter White", "Skyler White", "Jesse Pinkman", "Gustavo Fring", "Hank Schrader"];
-const celeb = ["Keanu Reeves", "Lin-Manuel Miranda", "Jason Derulo", "Patrick Warburton", "Jaiden Animations", "Rubber Ross", "Markiplier", "Satan", "God", "the Pope", "Mr Beast", "Rowan Atkinson", "Gandhi", "Daniel Radcliffe", "Emma Watson", "Johnny Depp", "Sean Connery", "Angelina Jolie", "Jason Momoa", "Jim Carrey", "Orlando Bloom", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "the Rock", "John Cena", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
+const celeb = ["Keanu Reeves", "Moses", "Lin-Manuel Miranda", "Jason Derulo", "Patrick Warburton", "Jaiden Animations", "Rubber Ross", "Markiplier", "Satan", "God", "the Pope", "Mr Beast", "Rowan Atkinson", "Gandhi", "Daniel Radcliffe", "Emma Watson", "Johnny Depp", "Sean Connery", "Angelina Jolie", "Jason Momoa", "Jim Carrey", "Orlando Bloom", "Jesus", "Steve Jobs", "Morgan Freeman", "Scarlett Johansson", "Owen Wilson", "Elliot Page", "Richard Nixon", "the Rock", "John Cena", "Danny DeVito", "Jack Black", "Jeff Bezos", "Bill Gates", "Barack Obama"];
 const chainsawMan = ["Makima", "Power (Chainsaw Man)", "Denji (Chainsaw Man)"];
 const clothing = ["skirt", "jacket", "belt", "cap", "hat", "coat", "glove", "waistcoat", "boot", "bikini", "shoe", "tophat", "pantaloon", "ring", "speedo", "bracelet", "hoodie", "sweater", "bowtie", "tie", "T-shirt", "shirt", "dress", "poncho"];
 const clothingNoPlural = ["pants", "trousers", "swimming trunks", "high heels", "pajamas", "shorts", "glasses", "boxer shorts", "knickers", "thigh highs"];
@@ -68,6 +69,8 @@ const drawfeeNonHumanCharacter = ["Todd from Mario", "Jacob horse", "Burgoo King
 const drawfeeFictionalAnimal = ["Pissboy", "Todd from Mario"];
 const drawfeeHost = ["Nathan", "Jacob", "Karina", "Julia", "David"];
 const drawtectives = ["Grandan Highforge", "York Rogdul", "Rosé (Drawtectives)", "Jancy True", "Eugene Finch", "Don Jovi", "Kingston Munch", "Villainius", "Harper Justice", "Ogalvy Smythe", "Lotta Justice", "Sorin Justice", "Emery Justice", "Harvey Hornswoggle"]
+const dreamworks = ["Shrek", "Megamind", "The Boss Baby", "Captain Underpants", "Hiccup (How to Train Your Dragon)", "Astrid (How to Train Your Dragon)", "Fiona (Shrek)", "Prince Charming (Shrek)", "Wallace (Wallace & Gromit)"]
+const dreamworksAnimal = ["Puss In Boots", "Toothless (How to Train Your Dragon)", "Master Oogway (Kung Fu Panda)", "Master Shi-Fu (Kung Fu Panda)", "Po (Kung Fu Panda)", "Barry B. Benson (Bee Movie)", "Donkey (Shrek)", "Dragon (Shrek)", "Gromit (Wallace & Gromit)"];
 const entertainmentPlace = ["theme park", "zoo", "aviary", "botanical garden", "park", "port", "library", "arcade", "circus", "carnival", "Renaissance fair"];
 const fashion = ["goth", "queer", "bad", "Renaissance", "wild west", "swimwear", "vintage", "antique", "superhero", "summer", "skater", "surfer", "winter", "villainous", "rock", "sexy", "streetwear", "sportswear", "nerdy", "nighttime", "grunge", "Roman", "minimalist", "modern", "military", "kawaii", "maternal", "Spartan", "operatic", "casual", "vintage", "flamboyant", "hippie", "tomboy", "punk", "biker", "dieselpunks", "solarpunk", "cyberpunk", "steampunk", "business-casual", "professional", "femme", "butch", "drag queen", "80s", "monochrome", "colourful", "pompous", "90s", "2000s", "1930s", "1920s", "70s", "Victorian", "Elizabethan"]
 const familyGuy = ["Peter Griffin", "Lois Griffin", "Meg Griffin", "Chris Griffin"];
@@ -127,8 +130,8 @@ const animeNonHuman = [...miscAnimeNonHuman, ...dragonBallZNonHuman];
 const animeCharacter = [...animeHuman, ...animeNonHuman];
 const nintendo = [...mario, ...zelda, ...miscNintendo, ...animalCrossing];
 const nintendoAnimal = [...miscNintendoAnimal, ...marioAnimal, ...pokemon];
-const humanCharacter = [...nintendo, ...disneyHuman, ...drawfeeHumanCharacter, ...starTrek, ...animeHuman, ...miscHuman, ...familyGuy, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
-const nonHumanCharacter = [...sonic, ...digimon, ...muppet, ...drawfeeNonHumanCharacter, ...animeNonHuman, ...miscNonHuman, ...kaiju, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal, ...disneyAnimal];
+const humanCharacter = [...nintendo, ...dreamworks, ...disneyHuman, ...drawfeeHumanCharacter, ...starTrek, ...animeHuman, ...miscHuman, ...familyGuy, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
+const nonHumanCharacter = [...sonic, ...dreamworksAnimal, ...digimon, ...muppet, ...drawfeeNonHumanCharacter, ...animeNonHuman, ...miscNonHuman, ...kaiju, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal, ...disneyAnimal];
 const foodNoPlural = [...sweetNoPlural, ...mealNoPlural, ...vegetableNoPlural];
 const foodPlural = [...fruit, ...sweet, ...meal, ...vegetable];
 const food = [...foodPlural, ...foodNoPlural];
