@@ -34,7 +34,8 @@ const prompts = [
     "%sapient% and %sapient% are chilling in %place%",
     "%sapient% is %action% in %place%",
     "%sapient% sees %objectA% for the first time",
-    "%character%, but (extra) %adjective%"
+    "%character%, but (extra) %adjective%",
+    "%sapient% staring in a %holiday% special"
 ];
 
 // Entries
@@ -79,6 +80,7 @@ const furniture = ["closet", "fridge", "freezer", "oven", "microwave", "furnace"
 const groupOfCharacters = ["room full of vampires", "the Teletubbies"];
 const extinctAnimal = ["mammoth", "dodo", "saber-tooth tiger", ...dinosaur];
 const kaiju = ["Godzilla", "King Kong", "Mothra"];
+const looneyTune = ["Bugs Bunny", "Marvin the Martian", "Daffy Duck", "Porky Pig", "Tweety Bird", "Silvester (Loony Tunes)", "Wile E. Coyote", "Road Runner"];
 const macguffin = ["the Ring (Lord of the Rings)", "the One Piece", "the Dragon Balls", "the Triforce"];
 const mario = ["Mario", "Luigi", "Toad", "Waluigi", "Wario", "Bowser", "Princess Peach", "Princess Daisy", "Princess Rosalina"];
 const marioAnimal = ["Boo (Mario)", "Koopa", "Donkey Kong", "Diddy Kong", "Yoshi (Mario)"];
@@ -112,8 +114,8 @@ const zelda = ["Ganondorf", "Link", "Zelda", "Tingle"];
 
 const animal = ["lion", "barracuda", "ox", "badger", "moose", "slug", "parrot", "kiwi (animal)", "snail", "horseshoe crab", "puffin", "cobra", "rattle snake", "owl", "bumblebee", "wasp", "bee", "mosquito", "daddy long-legs", "dog", "shrimp", "panther", "salamander", "chihuahua", "bat", "goldfish", "pufferfish", "frog", "alpaca", "beagle", "German shepherd", "pitbull", "duck", "swan", "goose", "bison", "llama", "mule", "donkey", "horse", "naked mole rat", "jaguar", "ladybug", "whale", "walrus", "seal", "blob fish", "coral", "chimp", "polar bear", "kangaroo", "spider", "butterfly", "ostrich", "emu", "cat", "fish", "jellyfish", "crab", "pigeon", "ape", "iguana", "lizard", "tortoise", "bird", "eagle", "hawk", "squid", "octopus", "sea star", "ferret", "mouse", "rat", "opossum", "cow", "sheep", "pig", "turtle", "shark", "tiger", "elephant", "giraffe", "zebra", "bear", "monkey", "penguin", "dolphin", "koala", "panda", "hippopotamus", "wolf", "deer", "rabbit", "fox", "cheetah", "rhinoceros", "gorilla", "squirrel", ...extinctAnimal, ...mythicalAnimal];
 
-const miscHuman = ["Jon Arbuckle", "Beelzebub", "the Onceler", "Dr Eggman", "James Bond", "Mr Bean", "Santa Claus", "Captain Jack Sparrow", "the Doctor (Doctor Who)", "Charlie Brown", "Christopher Robin", "Popeye the Sailor Man"];
-const miscNonHuman = ["Garfield", "Ponygon", "the Grinch", "the Lorax", "Odie (Garfield)", "Nermal (Garfield)", "Snoopy", "Brian Griffin"];
+const miscHuman = ["Jon Arbuckle", "Tintin", "Captain Haddock (Tintin)", "Shaggy (Scooby-Doo)", "Gargamel (The Smurfs)", "Aang (Avatar)", "Beelzebub", "Castiel (Supernatural)", "Dean (Supernatural)", "the Onceler", "Indiana Jones", "Dr Eggman", "James Bond", "Mr Bean", "Santa Claus", "Captain Jack Sparrow", "the Doctor (Doctor Who)", "Charlie Brown", "Christopher Robin", "Popeye the Sailor Man"];
+const miscNonHuman = ["Garfield", "Papa Smurf", "Smurfette", "Tom (Tom and Jerry)", "Scooby-Doo", "Zim (Invader Zim)", "Jerry (Tom and Jerry)", "Bojack Horseman", "Ponygon", "the Grinch", "the Lorax", "Odie (Garfield)", "Nermal (Garfield)", "Snoopy", "Brian Griffin"];
 const miscAnime = ["One-Punch Man", "Light Yagami", "Naruto Uzumaki", "Sasuke Uchiha"];
 const miscAnimeNonHuman = ["Ryuk", "Pochita"];
 const miscNintendo = ["Olimar", "Samus Aren"];
@@ -131,7 +133,7 @@ const animeCharacter = [...animeHuman, ...animeNonHuman];
 const nintendo = [...mario, ...zelda, ...miscNintendo, ...animalCrossing];
 const nintendoAnimal = [...miscNintendoAnimal, ...marioAnimal, ...pokemon];
 const humanCharacter = [...nintendo, ...dreamworks, ...disneyHuman, ...drawfeeHumanCharacter, ...starTrek, ...animeHuman, ...miscHuman, ...familyGuy, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
-const nonHumanCharacter = [...sonic, ...dreamworksAnimal, ...digimon, ...muppet, ...drawfeeNonHumanCharacter, ...animeNonHuman, ...miscNonHuman, ...kaiju, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal, ...disneyAnimal];
+const nonHumanCharacter = [...sonic, ...looneyTune, ...dreamworksAnimal, ...digimon, ...muppet, ...drawfeeNonHumanCharacter, ...animeNonHuman, ...miscNonHuman, ...kaiju, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal, ...disneyAnimal];
 const foodNoPlural = [...sweetNoPlural, ...mealNoPlural, ...vegetableNoPlural];
 const foodPlural = [...fruit, ...sweet, ...meal, ...vegetable];
 const food = [...foodPlural, ...foodNoPlural];
