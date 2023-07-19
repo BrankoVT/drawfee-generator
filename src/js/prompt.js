@@ -32,7 +32,7 @@ const prompts = [
     "%sapient% wearing %fashion% clothing",
     "%sapient% with a %fashion% %clothes%",
     "%sapient% and %sapient% are chilling in %place%",
-    "%sapient% is %action% in %place%",
+    "%sapient% is %verb% in %place%",
     "%sapient% sees %objectA% for the first time",
     "%character%, but (extra) %adjective%",
     "%sapient% doing a closet cosplay of %character%",
