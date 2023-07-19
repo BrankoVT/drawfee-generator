@@ -35,6 +35,7 @@ const prompts = [
     "%sapient% is %action% in %place%",
     "%sapient% sees %objectA% for the first time",
     "%character%, but (extra) %adjective%",
+    "%sapient% doing a closet cosplay of %character%",
     "%sapient% staring in a %holiday% special"
 ];
 
@@ -73,12 +74,14 @@ const drawtectives = ["Grandan Highforge", "York Rogdul", "Rosé (Drawtectives)"
 const dreamworks = ["Shrek", "Megamind", "The Boss Baby", "Captain Underpants", "Hiccup (How to Train Your Dragon)", "Astrid (How to Train Your Dragon)", "Fiona (Shrek)", "Prince Charming (Shrek)", "Wallace (Wallace & Gromit)"]
 const dreamworksAnimal = ["Puss In Boots", "Toothless (How to Train Your Dragon)", "Master Oogway (Kung Fu Panda)", "Master Shi-Fu (Kung Fu Panda)", "Po (Kung Fu Panda)", "Barry B. Benson (Bee Movie)", "Donkey (Shrek)", "Dragon (Shrek)", "Gromit (Wallace & Gromit)"];
 const entertainmentPlace = ["theme park", "zoo", "aviary", "botanical garden", "park", "port", "library", "arcade", "circus", "carnival", "Renaissance fair"];
+const extinctAnimal = ["mammoth", "dodo", "saber-tooth tiger", ...dinosaur];
 const fashion = ["goth", "queer", "bad", "Renaissance", "wild west", "swimwear", "vintage", "antique", "superhero", "summer", "skater", "surfer", "winter", "villainous", "rock", "sexy", "streetwear", "sportswear", "nerdy", "nighttime", "grunge", "Roman", "minimalist", "modern", "military", "kawaii", "maternal", "Spartan", "operatic", "casual", "vintage", "flamboyant", "hippie", "tomboy", "punk", "biker", "dieselpunks", "solarpunk", "cyberpunk", "steampunk", "business-casual", "professional", "femme", "butch", "drag queen", "80s", "monochrome", "colourful", "pompous", "90s", "2000s", "1930s", "1920s", "70s", "Victorian", "Elizabethan"]
 const familyGuy = ["Peter Griffin", "Lois Griffin", "Meg Griffin", "Chris Griffin"];
 const fruit = ["dragon fruit", "blackberry", "raspberry", "pomegranate", "cherry", "pineapple", "blueberry", "strawberry", "mango", "kiwi", "plum", "tomato", "apple", "pear", "banana", "orange", "grape", "melon"];
 const furniture = ["closet", "fridge", "freezer", "oven", "microwave", "furnace", "sink", "fireplace", "dishwasher", "cupboard", "sofa", "night stand", "bed", "love seat", "desk", "chair", "bookcase", "barbeque"];
 const groupOfCharacters = ["room full of vampires", "the Teletubbies"];
-const extinctAnimal = ["mammoth", "dodo", "saber-tooth tiger", ...dinosaur];
+const hannaBarbera = ["Yogi Bear", "Augie Doggie", "Doggie Daddy"];
+const hannaBarberaHuman = ["Fred Flintstone", "George Jetson", "Captain Caveman"];
 const kaiju = ["Godzilla", "King Kong", "Mothra"];
 const looneyTune = ["Bugs Bunny", "Marvin the Martian", "Daffy Duck", "Porky Pig", "Tweety Bird", "Silvester (Loony Tunes)", "Wile E. Coyote", "Road Runner"];
 const macguffin = ["the Ring (Lord of the Rings)", "the One Piece", "the Dragon Balls", "the Triforce"];
@@ -92,6 +95,7 @@ const mythicalAnimal = ["dragon", "hydra", "minotaur", "chimera", "unicorn", "pe
 const naturalFeature = ["tree", "volcano", "stream", "crater", "mud pool", "landslide", "cave", "pit", "tornado", "storm"]
 const pokemon = ["Spheal (Pokémon)", "Bulbasaur", "Pikachu", "Blastoise", "Swampert", "Mr Mime", "Sprigatito", "Eevee", "Charizard", "Venusaur", "Snorlax"];
 const room = ["garden", "nursery", "bathroom", "garage", "yard", "basement", "attic", "office", "toy room", "bedroom", "kitchen", "living room", "gym", "observatory", "lavatory"];
+const scoobyDoo = ["Scooby-Doo", "Shaggy (Scooby-Doo)", "Velma (Scooby-Doo)", "Daphne (Scooby-Doo)", "Fred (Scooby-Doo)"];
 const significantOther = ["wife", "husband", "spouse", "boyfriend", "girlfriend", "partner"];
 const simpsons = ["Bart Simpson", "Lisa Simpson", "Homer Simpson", "Marge Simpson", "Maggie Simpson", "Krusty the Clown", "Milhouse", "Mr Burns", "Ned Flanders"];
 const skill = ["boxing", "cleaning", "baking", "cooking", "painting", "drawing", "writing", "working out", "playing violin", "playing the sax", "playing the piano", "playing rugby", "playing american football", "playing soccer", "skiing", "tennising", "doing arts and crafts", "playing the guitar"];
@@ -132,8 +136,8 @@ const animeNonHuman = [...miscAnimeNonHuman, ...dragonBallZNonHuman];
 const animeCharacter = [...animeHuman, ...animeNonHuman];
 const nintendo = [...mario, ...zelda, ...miscNintendo, ...animalCrossing];
 const nintendoAnimal = [...miscNintendoAnimal, ...marioAnimal, ...pokemon];
-const humanCharacter = [...nintendo, ...dreamworks, ...disneyHuman, ...drawfeeHumanCharacter, ...starTrek, ...animeHuman, ...miscHuman, ...familyGuy, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
-const nonHumanCharacter = [...sonic, ...looneyTune, ...dreamworksAnimal, ...digimon, ...muppet, ...drawfeeNonHumanCharacter, ...animeNonHuman, ...miscNonHuman, ...kaiju, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal, ...disneyAnimal];
+const humanCharacter = [...nintendo, ...hannaBarberaHuman, ...dreamworks, ...disneyHuman, ...drawfeeHumanCharacter, ...starTrek, ...animeHuman, ...miscHuman, ...familyGuy, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
+const nonHumanCharacter = [...sonic, ...looneyTune, ...hannaBarbera, ...dreamworksAnimal, ...digimon, ...muppet, ...drawfeeNonHumanCharacter, ...animeNonHuman, ...miscNonHuman, ...kaiju, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal, ...disneyAnimal];
 const foodNoPlural = [...sweetNoPlural, ...mealNoPlural, ...vegetableNoPlural];
 const foodPlural = [...fruit, ...sweet, ...meal, ...vegetable];
 const food = [...foodPlural, ...foodNoPlural];
