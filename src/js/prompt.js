@@ -242,8 +242,6 @@ function displayPrompt() {
 
     const audioPlayer = document.getElementById('audioPlayer');
     audioPlayer.play();
-
-    console.log("displaying prompt")
 }
 
 document.addEventListener('DOMContentLoaded', function () {
