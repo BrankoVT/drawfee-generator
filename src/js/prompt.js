@@ -95,6 +95,7 @@ const mickeyMouse = ["Mickey Mouse", "Minnie Mouse", "Daisy Duck", "Pete (Mickey
 const muppet = ["Elmo", "Rizzo the Rat", "Cookie Monster", "Fozzie Bear", "Gonzo", "Beaker (Muppets)", "Big Bird (Sesame Street)", "Kermit the Frog", "Miss Piggy", "Animal (Muppets)", "Bert (Sesame Street)", "Ernie (Sesame Street)"]
 const mythicalAnimal = ["dragon", "hydra", "minotaur", "chimera", "unicorn", "pegasus", "griffin", "hippogriff", "phoenix", "kraken"];
 const naturalFeature = ["tree", "volcano", "stream", "crater", "mud pool", "landslide", "cave", "pit", "tornado", "storm"]
+const pixar = ["Buzz Lightyear", "Woody", "Tow Mater", "Andy (Toy Story)", "Syndrome (The Incredibles)", "Edna Mode", "James P. Sullivan (Monsters Inc)", "Mike Wazowski", "Lightning McQueen", "Nemo (Finding Nemo)", "Carl (Up)", "Dory (Finding Nemo)", "Frozone", "Elastigirl", "Mr Incredible", "Remy (Ratatouille)", "Wall-E"];
 const pokemon = ["Spheal (Pokémon)", "Bulbasaur", "Pikachu", "Blastoise", "Swampert", "Mr Mime", "Sprigatito", "Eevee", "Charizard", "Venusaur", "Snorlax"];
 const room = ["garden", "nursery", "bathroom", "garage", "yard", "basement", "attic", "office", "toy room", "bedroom", "kitchen", "living room", "gym", "observatory", "lavatory"];
 const scoobyDoo = ["Shaggy (Scooby-Doo)", "Velma (Scooby-Doo)", "Daphne (Scooby-Doo)", "Fred (Scooby-Doo)"];
@@ -105,7 +106,7 @@ const sonic = ["Sonic", "Tails", "Shadow the Hedgehog", "Silver the Hedgehog", "
 const spongebob = ["Spongebob Squarepants", "Squidward Tentacles", "Patrick Star", "Pearl Krabs", "K.A.R.E.N. (Spongebob)", "Mrs Puff (Spongebob)", "Larry the Lobster", "Sandy Cheeks", "Plankton (Spongebob)", "Gary (Spongebob)", "Squilliam Fancyson", "Eugene Krabs"];
 const starTrek = ["Spock", "Captain Kirk (Star Trek)", "Picard (Star Trek)"];
 const serviceBuilding = ["police headquarters", "airport", "train station", "tram station", "bus station", "elder home", "kindergarten", "university", "private school", "school", "high school", "elementary school", "prison", "hospital", "fire department", "doctor's office"];
-const superHero = ["Deadpool", "Ant Man", "Robin (Batman)", "Bat Girl", "Spider-Man", "Iron Man", "Mr Incredible", "Elastigirl", "Frozone", "Captain America", "Batman", "Wonder Woman", "Superman", "Black Widow"];
+const superHero = ["Deadpool", "Ant Man", "Robin (Batman)", "Bat Girl", "Spider-Man", "Iron Man", "Captain America", "Batman", "Wonder Woman", "Superman", "Black Widow"];
 const superVillain = ["the Joker", "Thanos", "Mysterio", "the Riddler", "Two-Face", "Harley Quinn", "Poison Ivy", "the Penguin (Batman)", "Mr Freeze"]
 const sweet = ["Mars bar", "ice cream"];
 const sweetNoPlural = ["chocolate", "candy", "chips/crisps"];
@@ -120,7 +121,7 @@ const zelda = ["Ganondorf", "Link", "Zelda", "Tingle"];
 
 const animal = ["lion", "barracuda", "ox", "badger", "moose", "slug", "parrot", "kiwi (animal)", "snail", "horseshoe crab", "puffin", "cobra", "rattle snake", "owl", "bumblebee", "wasp", "bee", "mosquito", "daddy long-legs", "dog", "shrimp", "panther", "salamander", "chihuahua", "bat", "goldfish", "pufferfish", "frog", "alpaca", "beagle", "German shepherd", "pitbull", "duck", "swan", "goose", "bison", "llama", "mule", "donkey", "horse", "naked mole rat", "jaguar", "ladybug", "whale", "walrus", "seal", "blob fish", "coral", "chimp", "polar bear", "kangaroo", "spider", "butterfly", "ostrich", "emu", "cat", "fish", "jellyfish", "crab", "pigeon", "ape", "iguana", "lizard", "tortoise", "bird", "eagle", "hawk", "squid", "octopus", "sea star", "ferret", "mouse", "rat", "opossum", "cow", "sheep", "pig", "turtle", "shark", "tiger", "elephant", "giraffe", "zebra", "bear", "monkey", "penguin", "dolphin", "koala", "panda", "hippopotamus", "wolf", "deer", "rabbit", "fox", "cheetah", "rhinoceros", "gorilla", "squirrel", ...extinctAnimal, ...mythicalAnimal];
 
-const miscHuman = ["Jon Arbuckle", "Tintin", "Captain Haddock (Tintin)", "Shaggy (Scooby-Doo)", "Gargamel (The Smurfs)", "Aang (Avatar)", "Beelzebub", "Castiel (Supernatural)", "Dean (Supernatural)", "the Onceler", "Indiana Jones", "Dr Eggman", "James Bond", "Mr Bean", "Santa Claus", "Captain Jack Sparrow", "the Doctor (Doctor Who)", "Charlie Brown", "Christopher Robin", "Popeye the Sailor Man"];
+const miscHuman = ["Jon Arbuckle", "Steven (Steven's Universe)", "Tintin", "Captain Haddock (Tintin)", "Shaggy (Scooby-Doo)", "Gargamel (The Smurfs)", "Aang (Avatar)", "Beelzebub", "Castiel (Supernatural)", "Dean (Supernatural)", "the Onceler", "Indiana Jones", "Dr Eggman", "James Bond", "Mr Bean", "Santa Claus", "Captain Jack Sparrow", "the Doctor (Doctor Who)", "Charlie Brown", "Christopher Robin", "Popeye the Sailor Man"];
 const miscNonHuman = ["Garfield", "Papa Smurf", "Smurfette", "Tom (Tom and Jerry)", "Scooby-Doo", "Zim (Invader Zim)", "Jerry (Tom and Jerry)", "Bojack Horseman", "Ponygon", "the Grinch", "the Lorax", "Odie (Garfield)", "Nermal (Garfield)", "Snoopy", "Brian Griffin"];
 const miscAnime = ["One-Punch Man", "Light Yagami", "Naruto Uzumaki", "Sasuke Uchiha"];
 const miscAnimeNonHuman = ["Ryuk", "Pochita"];
