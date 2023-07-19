@@ -82,6 +82,7 @@ const furniture = ["closet", "fridge", "freezer", "oven", "microwave", "furnace"
 const groupOfCharacters = ["room full of vampires", "the Teletubbies"];
 const hannaBarbera = ["Yogi Bear", "Scooby-Doo", "Augie Doggie", "Doggie Daddy"];
 const hannaBarberaHuman = ["Fred Flintstone", "George Jetson", "Captain Caveman"];
+const holiday = ["Christmas", "Olympics", "pride month", "International Woman's Day", "wedding", "New Year's Eve", "anniversary for Cats (2019)'s release", "birthday", "Thanksgiving", "Halloween", "Easter"];
 const kaiju = ["Godzilla", "King Kong", "Mothra"];
 const looneyTune = ["Bugs Bunny", "Marvin the Martian", "Daffy Duck", "Porky Pig", "Tweety Bird", "Silvester (Loony Tunes)", "Wile E. Coyote", "Road Runner"];
 const macguffin = ["the Ring (Lord of the Rings)", "the One Piece", "the Dragon Balls", "the Triforce"];
@@ -186,6 +187,7 @@ const entries = {
     verb: verb,
     dinosaur: dinosaur,
     pokemon: pokemon,
+    holiday: holiday,
     clothes: clothes,
     objectNoFoodSingular: objectNoFoodSingular,
     objectNoFoodSingularA: objectNoFoodSingularA,
