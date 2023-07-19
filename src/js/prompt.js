@@ -229,6 +229,7 @@ function generatePrompt() {
 
     // Replace blanks with random entries
     return randomPrompt.replace(/%(\w+)%/g, (match, key) => {
+        console.log("finding key " + key);
         const entriesForBlank = entries[key];
         return entriesForBlank[Math.floor(Math.random() * entriesForBlank.length)];
     });
