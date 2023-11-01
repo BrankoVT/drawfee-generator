@@ -36,8 +36,9 @@ const prompts = [
     "%sapient% sees %objectA% for the first time",
     "%character%, but (extra) %adjective%",
     "%sapient% doing a closet cosplay of %character%",
-    "%sapient% staring in a %holiday% special",
-    "%sapient% demands a %holiday% vacation from their boss %sapient%"
+    "%sapient% staring in a \"%holiday%\" special",
+    "%sapient% demands a \"%holiday%\" vacation from their boss %sapient%",
+    "don't talk to me before I had my %food%"
 ];
 
 // Entries
@@ -95,7 +96,8 @@ const mickeyMouse = ["Mickey Mouse", "Minnie Mouse", "Daisy Duck", "Pete (Mickey
 const muppet = ["Elmo", "Rizzo the Rat", "Cookie Monster", "Fozzie Bear", "Gonzo", "Beaker (Muppets)", "Big Bird (Sesame Street)", "Kermit the Frog", "Miss Piggy", "Animal (Muppets)", "Bert (Sesame Street)", "Ernie (Sesame Street)"]
 const mythicalAnimal = ["dragon", "hydra", "minotaur", "chimera", "unicorn", "pegasus", "griffin", "hippogriff", "phoenix", "kraken"];
 const naturalFeature = ["tree", "volcano", "stream", "crater", "mud pool", "landslide", "cave", "pit", "tornado", "storm"]
-const pixar = ["Buzz Lightyear", "Woody", "Tow Mater", "Andy (Toy Story)", "Syndrome (The Incredibles)", "Edna Mode", "James P. Sullivan (Monsters Inc)", "Mike Wazowski", "Lightning McQueen", "Nemo (Finding Nemo)", "Carl (Up)", "Dory (Finding Nemo)", "Frozone", "Elastigirl", "Mr Incredible", "Remy (Ratatouille)", "Wall-E"];
+const pixar = ["Tow Mater", "James P. Sullivan (Monsters Inc)", "Mike Wazowski", "Lightning McQueen", "Nemo (Finding Nemo)", "Dory (Finding Nemo)", "Remy (Ratatouille)", "Wall-E"];
+const pixarHuman = ["Buzz Lightyear", "Woody", "Andy (Toy Story)", "Syndrome (The Incredibles)", "Edna Mode", "Carl (Up)", "Frozone", "Elastigirl", "Mr Incredible"]
 const pokemon = ["Spheal (Pokémon)", "Bulbasaur", "Pikachu", "Blastoise", "Swampert", "Mr Mime", "Sprigatito", "Eevee", "Charizard", "Venusaur", "Snorlax"];
 const room = ["garden", "nursery", "bathroom", "garage", "yard", "basement", "attic", "office", "toy room", "bedroom", "kitchen", "living room", "gym", "observatory", "lavatory"];
 const scoobyDoo = ["Shaggy (Scooby-Doo)", "Velma (Scooby-Doo)", "Daphne (Scooby-Doo)", "Fred (Scooby-Doo)"];
@@ -139,8 +141,8 @@ const animeNonHuman = [...miscAnimeNonHuman, ...dragonBallZNonHuman];
 const animeCharacter = [...animeHuman, ...animeNonHuman];
 const nintendo = [...mario, ...zelda, ...miscNintendo, ...animalCrossing];
 const nintendoAnimal = [...miscNintendoAnimal, ...marioAnimal, ...pokemon];
-const humanCharacter = [...nintendo, ...scoobyDoo, ...hannaBarberaHuman, ...dreamworks, ...disneyHuman, ...drawfeeHumanCharacter, ...starTrek, ...animeHuman, ...miscHuman, ...familyGuy, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
-const nonHumanCharacter = [...sonic, ...looneyTune, ...hannaBarbera, ...dreamworksAnimal, ...digimon, ...muppet, ...drawfeeNonHumanCharacter, ...animeNonHuman, ...miscNonHuman, ...kaiju, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal, ...disneyAnimal];
+const humanCharacter = [...nintendo, ...pixarHuman, ...scoobyDoo, ...hannaBarberaHuman, ...dreamworks, ...disneyHuman, ...drawfeeHumanCharacter, ...starTrek, ...animeHuman, ...miscHuman, ...familyGuy, ...aceAttorney, ...superHero, ...superVillain, ...simpsons, ...drawtectives, ...breakingBad];
+const nonHumanCharacter = [...sonic, ...pixar, ...looneyTune, ...hannaBarbera, ...dreamworksAnimal, ...digimon, ...muppet, ...drawfeeNonHumanCharacter, ...animeNonHuman, ...miscNonHuman, ...kaiju, ...spongebob, ...drawfeeFictionalAnimal, ...nintendoAnimal, ...disneyAnimal];
 const foodNoPlural = [...sweetNoPlural, ...mealNoPlural, ...vegetableNoPlural];
 const foodPlural = [...fruit, ...sweet, ...meal, ...vegetable];
 const food = [...foodPlural, ...foodNoPlural];
@@ -218,6 +220,7 @@ const entries = {
     nonHumanCharacter: nonHumanCharacter,
     character: character,
     sapient: sapient,
+    sapients: sapients,
     animalAndCharacter: animalAndCharacter,
     nonHuman: [...object, ...animal]
 };
