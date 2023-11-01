@@ -10,7 +10,7 @@ This is a website for a collection of generators based on the YouTube channel Dr
     - Github: [@BrankoVT](https://github.com/BrankoVT)
     - pronouns.page: [@brankovt1bvt](https://pronouns.page/@brankovt1bvt)
     - LinkedIn: [Branko Van Tendeloo](https://www.linkedin.com/in/branko-van-tendeloo/)
-    - Twitter: [@Branko44075805](https://twitter.com/Branko44075805)
+    - Twitter: [@BrankoTime](https://twitter.com/BrankoTime)
     - YouTube: [Branko](https://www.youtube.com/channel/UCZ4P5SXFYR6MQgQaNmGtxaw)
     - Reddit: [u/brankovt1](https://www.reddit.com/user/Brankovt1)
 
